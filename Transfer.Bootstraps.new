@@ -1,0 +1,848 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=745;
+	taxlabels
+	'ACO11568.1_Caligus_rogercresseyi'
+	'ACO51885.1_Rana_catesbeiana'
+	'ACZ62638.1_Gadus_morhua'
+	'AFP89968.1_Bufo_japonicus_formosus'
+	'AGK88246.1_Mytilus_galloprovincialis'
+	'AGK88247.1_Mytilus_galloprovincialis'
+	'AGM14600.1_Ruditapes_philippinarum'
+	'AGU38820.1_Sparus_aurata'
+	'AJ293508.1_Geodia_cydonium_BHP2'
+	'ALM23382.1_Clarias_batrachus'
+	'AM040445.1_Lubomirskia_baikalensis'
+	'AM040446.1_Lubomirskia_baicalensis_BHP2'
+	'AMY56534.1_Botryllus_schlosseri'
+	'ANR94960.1_Trichoplax_adhaerens'
+	'ANR94962.1_Trichoplax_adhaerens'
+	'APY24039.1_Corbicula_fluminea'
+	'AST14854.1_Macrobrachium_olfersii'
+	B032_Acropora_millepora
+	B034_Acropora_millepora
+	'BAV03492.1_Anopheles_stephensi'
+	BW636486_Dugesia_ryukyuensis
+	BW639957_Dugesia_ryukyuensis
+	'CAB97129.1_Geodia_cydonium_BHP1'
+	'CAB97205.1_Suberites_domuncula_BHP1'
+	'CAF74919.1_Suberites_domuncula_BHP2'
+	'CAF90551.1_Tetraodon_nigroviridis'
+	'CDI59404.1_Macrobrachium_rosenbergii'
+	CJ353991_Molgula_tectiformis
+	CJ401256_Molgula_tectiformis
+	CJ416978_Molgula_tectiformis
+	CJ418536_Molgula_tectiformis
+	CL1006_Metridium_senile
+	CL1397_Montastrea_faveolata
+	CL1419_Amphimedon_queenslandica
+	CL156_Metridium_senile
+	CL253_Metridium_senile
+	CL263_Anemonia_viridis
+	CL3671_Metridium_senile
+	CL443_Porites_astreoides
+	CL533_Anemonia_viridis
+	CL5507_Acropora_palmata
+	CL6277_Montastrea_faveolata
+	CL645_Acropora_palmata
+	CO536156_Hydractinia_echinata
+	Chondrilla_nucula_11840
+	Chondrilla_nucula_4422_
+	Chondrilla_nucula_6556
+	Chondrilla_nucula_7779_
+	Corticium_candelabrum_10268
+	Corticium_candelabrum_1337_
+	Corticium_candelabrum_1895
+	Corticium_candelabrum_19263
+	Corticium_candelabrum_19313
+	Corticium_candelabrum_24588_
+	Corticium_candelabrum_2570
+	Corticium_candelabrum_54098
+	Corticium_candelabrum_6107_
+	Corticium_candelabrum_69341
+	'DAA20882.1_Bos_taurus'
+	'EAT47374.1_Aedes_aegypti'
+	EC433855_Strongylocntrotus_purpuratus
+	'EFA03725.2_Tribolium_castaneum'
+	'ELT87488.1_Capitella_teleta'
+	'ELT91516.1_Capitella_teleta'
+	'ELU02334.1_Capitella_teleta'
+	'ELU09359.1_Capitella_teleta'
+	'EMP32352.1_Chelonia_mydas'
+	'ENSCSAVT00000012415.1_Ciona_savignyi'
+	'ERL93168.1_Dendroctonus_ponderosae'
+	ES750616_Biomphalaria_glabrata
+	'ETN66716.1_Anopheles_darlingi'
+	Eb_CT003224_b2
+	Eb_CT016427_b2
+	Ephydatia_muelleri_17398
+	Ephydatia_muelleri_18578
+	Ephydatia_muelleri_20417
+	Ephydatia_muelleri_25871
+	Ephydatia_muelleri_7412
+	FK735856_Anemonia_viridis
+	FK753932_Anemonia_viridis
+	GAUQ01074119
+	GAUQ01107449
+	GAUR01024901
+	GAUT01024010
+	GAUT01050249
+	GAVC01066868
+	GAVE01040088
+	GAVF01025664
+	GAVF01073262
+	GAVI01043083
+	GAVI01054851
+	GAVJ01047395
+	GAVK01062196
+	GAVK01088632
+	GAVO01021433
+	GAVP01076185
+	GAVP01114678
+	GAVQ01011048
+	GAVQ01042688
+	GAVR01050148
+	GAZO01002368
+	GAZO01002563
+	GAZP01025502
+	GE908154_Porites_astreoides
+	GE912691_Porites_astreoides
+	GW217795_Acropora_palmata
+	Homo_sapiens_BAK
+	Homo_sapiens_BFL1
+	Homo_sapiens_BOK
+	Ircinia_fasciculata_112
+	Ircinia_fasciculata_2573_
+	Ircinia_fasciculata_4707_
+	Ircinia_fasciculata_5524
+	JL14075_Lethenteron_japonicum
+	JL6271_Lethenteron_japonicum
+	JL8663_Lethenteron_japonicum
+	'KFB44081.1_Anopheles_sinensis'
+	'KFM57241.1_Stegodyphus_mimosarum'
+	'KFM81480.1_Stegodyphus_mimosarum'
+	'KQL61250.1_Amazona_aestiva'
+	'KXJ10701.1_Exaiptasia_pallida'
+	LittleSkate_TranscriptomeContig18668
+	'MF380423.1_Chondrosia_reniformis_BHP2'
+	ML10941a_Mnemiopsis_leidyi
+	'NP_000624.2_Homo_sapiens_BCL2'
+	'NP_001003011.1_Canis_lupus_familiaris'
+	'NP_001005428.1_Xenopus_tropicalis'
+	'NP_001011065.1_Xenopus_tropicalis'
+	'NP_001018644.1_Canis_lupus_familiaris'
+	'NP_001020475.1_Gallus_gallus'
+	'NP_001025424.1_Danio_rerio'
+	'NP_001026091.1_Gallus_gallus'
+	'NP_001085729.1_Xenopus_laevis'
+	'NP_001092338.1_Bos_taurus'
+	'NP_001117034.1_Salmo_salar'
+	'NP_001187866.1_Ictalurus_punctatus'
+	'NP_001279536.1_Callorhinchus_milii'
+	'NP_001306238.1_Gallus_gallus'
+	'NP_004041.1_Homo_sapiens_BCLW'
+	'NP_031553.1_Mus_musculus'
+	'NP_031560.2_Mus_musculus'
+	'NP_031563.1_Mus_musculus'
+	'NP_033871.2_Mus_musculus'
+	'NP_038507.1_Mus_musculus'
+	'NP_065129.1_Homo_sapiens_NRH'
+	'NP_068779.1_Homo_sapiens_MCL1'
+	'NP_446185.1_Rattus_norvegicus'
+	'NP_523702.1_Drosophila_melanogaster'
+	'NP_571674.1_Danio_rerio'
+	'NP_612815.1_Homo_sapiens_BCLX'
+	'NP_620116.1_Homo_sapiens_BAX'
+	'NP_919375.2_Danio_rerio'
+	'NP_919379.1_Danio_rerio'
+	'NP_989185.1_Xenopus_tropicalis'
+	'NP_989853.1_Gallus_gallus'
+	'NP_990037.1_Gallus_gallus'
+	'NP_990197.1_Gallus_gallus'
+	'OAD46914.1_Eufriesea_mexicana'
+	'OBS66301.1_Neotoma_lepida'
+	'OCT62575.1_Xenopus_laevis'
+	'OPJ88891.1_Patagioenas_fasciata_monilis'
+	'OWF49771.1_Mizuhopecten_yessoensis'
+	'OXB55796.1_Callipepla_squamata'
+	'OXB79959.1_Colinus_virginianus'
+	'PFX28631.1_Stylophora_pistillata'
+	'PIK39763.1_Apostichopus_japonicus'
+	'PIK47408.1_Apostichopus_japonicus'
+	'PIK54204.1_Apostichopus_japonicus'
+	'PIO24038.1_Rana_catesbeiana'
+	'PIO37174.1_Rana_catesbeiana'
+	'PKU35247.1_Limosa_lapponica_baueri'
+	PMZ_0017448_RA_Petromyzon_marinus
+	PMZ_0036959_RA_Petromyzon_marinus
+	PMZ_0045611_RA_Petromyzon_marinus
+	Petrosia_ficiformis_1467
+	Petrosia_ficiformis_40943
+	Pseudospongosorites_suberitoides_1537_
+	Pseudospongosorites_suberitoides_426_
+	Pseudospongosorites_suberitoides_9444
+	RSZYR131205712144_Polyodon_spathula_2743_0_31
+	RSZYR1312057133245_Polyodon_spathula_55205_0_47
+	RSZYR1312057137359_Polyodon_spathula_64750_0_29
+	RSZYR1312057152644_Polyodon_spathula_112822_0_11
+	SmallerSpottedCatshark_TranscriptomeContig14499
+	SmallerSpottedCatshark_TranscriptomeContig15482
+	SmallerSpottedCatshark_TranscriptomeContig18163
+	SmallerSpottedCatshark_TranscriptomeContig67033
+	TRINITY_DN13769_c2_g1_i3_Salpa_fusiformis
+	TRINITY_DN13804_c5_g1_i1_Salpa_fusiformis
+	TRINITY_DN1593_c0_g2_i1_Salpa_fusiformis
+	TRINITY_DN26471_c1_g3_i1_Doliolum_nationalis
+	TRINITY_DN28979_c1_g1_i1_Doliolum_nationalis
+	WHYR1501014242488_Atractosteus_spatula_122603_0_21
+	WHYR150101426190_Atractosteus_spatula_11595_0_25
+	WHYR1501014421415_Lepisosteus_platyrhincus
+	'XM_003383340.3_Amphimedon_queenslandica'
+	'XM_003383377.3_Amphimedon_queenslandica'
+	'XM_003386685.3_Amphimedon_queenslandica'
+	'XM_020005026.1_Amphimedon_queenslandica'
+	'XP_001085850.1_Macaca_mulatta'
+	'XP_001341214.1_Danio_rerio'
+	'XP_001362850.1_Monodelphis_domestica'
+	'XP_001368168.1_Monodelphis_domestica'
+	'XP_001370877.1_Monodelphis_domestica'
+	'XP_001512467.1_Ornithorhynchus_anatinus'
+	'XP_001604280.2_Nasonia_vitripennis'
+	'XP_001622902.1_Nematostella_vectensis'
+	'XP_001626412.1_Nematostella_vectensis'
+	'XP_001629527.1_Nematostella_vectensis'
+	'XP_001634697.1_Nematostella_vectensis'
+	'XP_001641955.1_Nematostella_vectensis'
+	'XP_001659566.1_Aedes_aegypti'
+	'XP_001843869.1_Culex_quinquefasciatus'
+	'XP_001843870.1_Culex_quinquefasciatus'
+	'XP_001961317.2_Drosophila_ananassae'
+	'XP_001970756.1_Drosophila_erecta'
+	'XP_002026046.1_Drosophila_persimilis'
+	'XP_002049521.2_Drosophila_virilis'
+	'XP_002110477.1_Trichoplax_adhaerens'
+	'XP_002120303.1_Ciona_intestinalis'
+	'XP_002123003.1_Ciona_intestinalis'
+	'XP_002127107.1_Ciona_intestinalis'
+	'XP_002129296.1_Ciona_intestinalis'
+	'XP_002158069.3_Hydra_vulgaris'
+	'XP_002411625.1_Ixodes_scapularis'
+	'XP_002432416.1_Pediculus_humanus_corporis'
+	'XP_002589440.1_Branchiostoma_floridae'
+	'XP_002591187.1_Branchiostoma_floridae'
+	'XP_002593407.1_Branchiostoma_floridae'
+	'XP_002609844.1_Branchiostoma_floridae'
+	'XP_002730739.1_Saccoglossus_kowalevskii'
+	'XP_002740789.2_Saccoglossus_kowalevskii'
+	'XP_002825511.1_Pongo_abelii'
+	'XP_002934442.1_Xenopus_tropicalis'
+	'XP_002935512.1_Xenopus_tropicalis'
+	'XP_002936386.1_Xenopus_tropicalis'
+	'XP_002936655.1_Xenopus_tropicalis'
+	'XP_003220444.1_Anolis_carolinensis'
+	'XP_003226241.1_Anolis_carolinensis'
+	'XP_003229025.1_Anolis_carolinensis'
+	'XP_003229076.1_Anolis_carolinensis'
+	'XP_003386092.1_Amphimedon_queenslandica_BHP2'
+	'XP_003413903.1_Loxodonta_africana'
+	'XP_003450317.1_Oreochromis_niloticus'
+	'XP_003486071.1_Bombus_impatiens'
+	'XP_003700280.2_Megachile_rotundata'
+	'XP_003707726.2_Megachile_rotundata'
+	'XP_003730785.2_Strongylocentrotus_purpuratus'
+	'XP_003741434.1_Galendromus_occidentalis'
+	'XP_003744196.1_Galendromus_occidentalis'
+	'XP_003755544.1_Sarcophilus_harrisii'
+	'XP_003759697.1_Sarcophilus_harrisii'
+	'XP_003769014.1_Sarcophilus_harrisii'
+	'XP_003784670.1_Otolemur_garnettii'
+	'XP_003901335.1_Papio_anubis'
+	'XP_003941668.1_Saimiri_boliviensis_boliviensis'
+	'XP_003964831.1_Takifugu_rubripes'
+	'XP_003965868.2_Takifugu_rubripes'
+	'XP_003969611.1_Takifugu_rubripes'
+	'XP_003978225.1_Takifugu_rubripes'
+	'XP_004396639.1_Odobenus_rosmarus_divergens'
+	'XP_004517407.1_Ceratitis_capitata'
+	'XP_004542727.1_Maylandia_zebra'
+	'XP_004565541.1_Maylandia_zebra'
+	'XP_004646527.1_Octodon_degus'
+	'XP_004701757.1_Echinops_telfairi'
+	'XP_004755468.2_Mustela_putorius_furo'
+	'XP_005008796.1_Cavia_porcellus'
+	'XP_005026887.2_Anas_platyrhynchos'
+	'XP_005073785.1_Mesocricetus_auratus'
+	'XP_005089109.1_Aplysia_californica'
+	'XP_005102292.2_Aplysia_californica'
+	'XP_005103752.1_Aplysia_californica'
+	'XP_005104447.1_Aplysia_californica'
+	'XP_005149994.1_Melopsittacus_undulatus'
+	'XP_005165978.1_Danio_rerio'
+	'XP_005186111.2_Musca_domestica'
+	'XP_005186112.1_Musca_domestica'
+	'XP_005239783.1_Falco_peregrinus'
+	'XP_005285787.1_Chrysemys_picta_bellii'
+	'XP_005293860.1_Chrysemys_picta_bellii'
+	'XP_005295824.1_Chrysemys_picta_bellii'
+	'XP_005301749.1_Chrysemys_picta_bellii'
+	'XP_005305121.1_Chrysemys_picta_bellii'
+	'XP_005316985.2_Ictidomys_tridecemlineatus'
+	'XP_005425117.1_Geospiza_fortis'
+	'XP_005532318.1_Pseudopodoces_humilis'
+	'XP_005748942.1_Pundamilia_nyererei'
+	'XP_005806267.1_Xiphophorus_maculatus'
+	'XP_005814115.1_Xiphophorus_maculatus'
+	'XP_005878084.1_Myotis_brandtii'
+	'XP_005995522.1_Latimeria_chalumnae'
+	'XP_005996278.1_Latimeria_chalumnae'
+	'XP_005996773.1_Latimeria_chalumnae'
+	'XP_006001242.1_Latimeria_chalumnae'
+	'XP_006005319.1_Latimeria_chalumnae'
+	'XP_006008143.1_Latimeria_chalumnae'
+	'XP_006008757.1_Latimeria_chalumnae'
+	'XP_006009177.1_Latimeria_chalumnae'
+	'XP_006119412.1_Pelodiscus_sinensis'
+	'XP_006122944.1_Pelodiscus_sinensis'
+	'XP_006267096.1_Alligator_mississippiensis'
+	'XP_006270155.2_Alligator_mississippiensis'
+	'XP_006273359.1_Alligator_mississippiensis'
+	'XP_006628669.1_Lepisosteus_oculatus'
+	'XP_006628719.1_Lepisosteus_oculatus'
+	'XP_006639703.1_Lepisosteus_oculatus'
+	'XP_006641856.1_Lepisosteus_oculatus'
+	'XP_006642717.1_Lepisosteus_oculatus'
+	'XP_006733384.1_Leptonychotes_weddellii'
+	'XP_006822173.1_Saccoglossus_kowalevskii'
+	'XP_006860617.1_Chrysochloris_asiatica'
+	'XP_006898744.1_Elephantulus_edwardii'
+	'XP_006902985.1_Elephantulus_edwardii'
+	'XP_006973851.1_Peromyscus_maniculatus_bairdii'
+	'XP_007062552.1_Chelonia_mydas'
+	'XP_007066911.1_Chelonia_mydas'
+	'XP_007067441.1_Chelonia_mydas'
+	'XP_007249986.2_Astyanax_mexicanus'
+	'XP_007258676.2_Astyanax_mexicanus'
+	'XP_007426734.1_Python_bivittatus'
+	'XP_007435463.1_Python_bivittatus'
+	'XP_007439373.1_Python_bivittatus'
+	'XP_007440510.1_Python_bivittatus'
+	'XP_007440729.1_Python_bivittatus'
+	'XP_007443511.1_Python_bivittatus'
+	'XP_007480024.1_Monodelphis_domestica'
+	'XP_007483748.1_Monodelphis_domestica'
+	'XP_007492742.1_Monodelphis_domestica'
+	'XP_007502478.1_Monodelphis_domestica'
+	'XP_007549112.1_Poecilia_formosa'
+	'XP_007662952.1_Ornithorhynchus_anatinus'
+	'XP_007667294.1_Ornithorhynchus_anatinus'
+	'XP_007883445.1_Callorhinchus_milii'
+	'XP_007885915.1_Callorhinchus_milii'
+	'XP_007892341.1_Callorhinchus_milii'
+	'XP_007898732.1_Callorhinchus_milii'
+	'XP_007903343.1_Callorhinchus_milii'
+	'XP_007904307.1_Callorhinchus_milii'
+	'XP_007939575.1_Orycteropus_afer_afer'
+	'XP_008052324.1_Carlito_syrichta'
+	'XP_008066694.1_Carlito_syrichta'
+	'XP_008070772.1_Carlito_syrichta'
+	'XP_008267216.1_Oryctolagus_cuniculus'
+	'XP_008267599.1_Oryctolagus_cuniculus'
+	'XP_008295832.1_Stegastes_partitus'
+	'XP_008304234.1_Stegastes_partitus'
+	'XP_008316516.1_Cynoglossus_semilaevis'
+	'XP_008322040.1_Cynoglossus_semilaevis'
+	'XP_008414120.1_Poecilia_reticulata'
+	'XP_008429101.1_Poecilia_reticulata'
+	'XP_008480434.1_Diaphorina_citri'
+	'XP_008556892.1_Microplitis_demolitor'
+	'XP_008579524.1_Galeopterus_variegatus'
+	'XP_008827992.1_Nannospalax_galili'
+	'XP_009009884.1_Helobdella_robusta'
+	'XP_009018195.1_Helobdella_robusta'
+	'XP_009050370.1_Lottia_gigantea'
+	'XP_009053780.1_Lottia_gigantea'
+	'XP_009061217.1_Lottia_gigantea'
+	'XP_009064284.1_Lottia_gigantea'
+	'XP_009067239.1_Lottia_gigantea'
+	'XP_009281021.1_Aptenodytes_forsteri'
+	'XP_009869395.1_Apaloderma_vittatum'
+	'XP_010728299.1_Larimichthys_crocea'
+	'XP_010735438.1_Larimichthys_crocea'
+	'XP_010741161.2_Larimichthys_crocea'
+	'XP_010741994.1_Larimichthys_crocea'
+	'XP_010768816.1_Notothenia_coriiceps'
+	'XP_010769745.1_Notothenia_coriiceps'
+	'XP_010770400.1_Notothenia_coriiceps'
+	'XP_010873822.1_Esox_lucius'
+	'XP_010889567.1_Esox_lucius'
+	'XP_010897651.1_Esox_lucius'
+	'XP_010903871.1_Esox_lucius'
+	'XP_011184233.1_Zeugodacus_cucurbitae'
+	'XP_011197933.1_Bactrocera_dorsalis'
+	'XP_011228882.2_Ailuropoda_melanoleuca'
+	'XP_011254927.1_Camponotus_floridanus'
+	'XP_011309370.1_Fopius_arisanus'
+	'XP_011342847.1_Ooceraea_biroi'
+	'XP_011405690.1_Ampimedon_queenslandica_BHP1'
+	'XP_011409569.1_Amphimedon_queenslandica_BHP2'
+	'XP_011436990.1_Crassostrea_gigas'
+	'XP_011439700.1_Crassostrea_gigas'
+	'XP_011449013.1_Crassostrea_gigas'
+	'XP_011475079.2_Oryzias_latipes'
+	'XP_011502886.1_Ceratosolen_solmsi_marchali'
+	'XP_011667030.1_Strongylocentrotus_purpuratus'
+	'XP_011669020.1_Strongylocentrotus_purpuratus'
+	'XP_012036939.2_Ovis_aries'
+	'XP_012174553.1_Bombus_terrestris'
+	'XP_012262750.1_Athalia_rosae'
+	'XP_012280205.1_Orussus_abietinus'
+	'XP_012281833.1_Orussus_abietinus'
+	'XP_012297833.1_Aotus_nancymaae'
+	'XP_012322342.1_Aotus_nancymaae'
+	'XP_012350504.1_Apis_florea'
+	'XP_012400275.1_Sarcophilus_harrisii'
+	'XP_012409072.1_Sarcophilus_harrisii'
+	'XP_012513507.1_Propithecus_coquereli'
+	'XP_012515547.1_Propithecus_coquereli'
+	'XP_012527858.1_Monomorium_pharaonis'
+	'XP_012670407.1_Clupea_harengus'
+	'XP_012670557.1_Clupea_harengus'
+	'XP_012672972.1_Clupea_harengus'
+	'XP_012673610.1_Clupea_harengus'
+	'XP_012680754.1_Clupea_harengus'
+	'XP_012681135.1_Clupea_harengus'
+	'XP_012684996.1_Clupea_harengus'
+	'XP_012706384.1_Fundulus_heteroclitus'
+	'XP_012716615.1_Fundulus_heteroclitus'
+	'XP_012732889.2_Fundulus_heteroclitus'
+	'XP_012935794.1_Aplysia_californica'
+	'XP_013065969.1_Biomphalaria_glabrata'
+	'XP_013069706.1_Biomphalaria_glabrata'
+	'XP_013070172.1_Biomphalaria_glabrata'
+	'XP_013081872.1_Biomphalaria_glabrata'
+	'XP_013085524.1_Biomphalaria_glabrata'
+	'XP_013102825.1_Stomoxys_calcitrans'
+	'XP_013102828.1_Stomoxys_calcitrans'
+	'XP_013401246.1_Lingula_anatina'
+	'XP_013403489.1_Lingula_anatina'
+	'XP_013403667.1_Lingula_anatina'
+	'XP_013772602.2_Limulus_polyphemus'
+	'XP_013780070.1_Limulus_polyphemus'
+	'XP_013781657.1_Limulus_polyphemus'
+	'XP_013785182.1_Limulus_polyphemus'
+	'XP_013785930.1_Limulus_polyphemus'
+	'XP_013787501.1_Limulus_polyphemus'
+	'XP_013873162.1_Austrofundulus_limnaeus'
+	'XP_013912039.1_Thamnophis_sirtalis'
+	'XP_013918940.1_Thamnophis_sirtalis'
+	'XP_013925506.1_Thamnophis_sirtalis'
+	'XP_013927897.1_Thamnophis_sirtalis'
+	'XP_013981944.1_Salmo_salar'
+	'XP_014017918.1_Salmo_salar'
+	'XP_014044193.1_Salmo_salar'
+	'XP_014045383.1_Salmo_salar'
+	'XP_014118033.1_Pseudopodoces_humilis'
+	'XP_014204471.1_Copidosoma_floridanum'
+	'XP_014209925.1_Copidosoma_floridanum'
+	'XP_014224430.1_Trichogramma_pretiosum'
+	'XP_014248026.1_Cimex_lectularius'
+	'XP_014328910.1_Xiphophorus_maculatus'
+	'XP_014437116.1_Pelodiscus_sinensis'
+	'XP_014452667.2_Alligator_mississippiensis'
+	'XP_014612270.1_Polistes_canadensis'
+	'XP_014701786.1_Equus_asinus'
+	'XP_014744847.1_Sturnus_vulgaris'
+	'XP_014749353.1_Sturnus_vulgaris'
+	'XP_014770366.1_Octopus_bimaculoides'
+	'XP_014771066.1_Octopus_bimaculoides'
+	'XP_014784272.1_Octopus_bimaculoides'
+	'XP_014809227.1_Calidris_pugnax'
+	'XP_014846822.1_Poecilia_mexicana'
+	'XP_014890668.1_Poecilia_latipinna'
+	'XP_015120417.1_Diachasma_alloeum'
+	'XP_015121586.1_Diachasma_alloeum'
+	'XP_015210187.1_Lepisosteus_oculatus'
+	'XP_015230033.1_Cyprinodon_variegatus'
+	'XP_015266744.1_Gekko_japonicus'
+	'XP_015271553.1_Gekko_japonicus'
+	'XP_015274021.1_Gekko_japonicus'
+	'XP_015274278.1_Gekko_japonicus'
+	'XP_015275229.1_Gekko_japonicus'
+	'XP_015335722.1_Marmota_marmota_marmota'
+	'XP_015429740.1_Dufourea_novaeangliae'
+	'XP_015434278.1_Dufourea_novaeangliae'
+	'XP_015461408.2_Astyanax_mexicanus'
+	'XP_015494961.1_Parus_major'
+	'XP_015522411.1_Neodiprion_lecontei'
+	'XP_015608314.1_Cephus_cinctus'
+	'XP_015665723.1_Protobothrops_mucrosquamatus'
+	'XP_015670779.1_Protobothrops_mucrosquamatus'
+	'XP_015677514.1_Protobothrops_mucrosquamatus'
+	'XP_015679194.1_Protobothrops_mucrosquamatus'
+	'XP_015751397.1_Acropora_digitifera'
+	'XP_015755186.1_Acropora_digitifera'
+	'XP_015756010.1_Acropora_digitifera'
+	'XP_015757234.1_Acropora_digitifera'
+	'XP_015757242.1_Acropora_digitifera'
+	'XP_015759441.1_Acropora_digitifera'
+	'XP_015765969.1_Acropora_digitifera'
+	'XP_015767434.1_Acropora_digitifera'
+	'XP_015927755.1_Parasteatoda_tepidariorum'
+	'XP_015927756.1_Parasteatoda_tepidariorum'
+	'XP_015929024.1_Parasteatoda_tepidariorum'
+	'XP_016018153.1_Rousettus_aegyptiacus'
+	'XP_016061578.1_Miniopterus_natalensis'
+	'XP_016100712.1_Sinocyclocheilus_grahami'
+	'XP_016113438.1_Sinocyclocheilus_grahami'
+	'XP_016309053.1_Sinocyclocheilus_anshuiensis'
+	'XP_016320172.1_Sinocyclocheilus_anshuiensis'
+	'XP_016343500.1_Sinocyclocheilus_anshuiensis'
+	'XP_016345360.1_Sinocyclocheilus_anshuiensis'
+	'XP_016353976.1_Sinocyclocheilus_anshuiensis'
+	'XP_016359517.1_Sinocyclocheilus_anshuiensis'
+	'XP_016413222.1_Sinocyclocheilus_rhinocerous'
+	'XP_017284035.1_Kryptolebias_marmoratus'
+	'XP_017328389.1_Ictalurus_punctatus'
+	'XP_017329063.1_Ictalurus_punctatus'
+	'XP_017540596.1_Pygocentrus_nattereri'
+	'XP_017553035.1_Pygocentrus_nattereri'
+	'XP_017565913.1_Pygocentrus_nattereri'
+	'XP_017577191.1_Pygocentrus_nattereri'
+	'XP_017755955.1_Eufriesea_mexicana'
+	'XP_017769675.1_Nicrophorus_vespilloides'
+	'XP_017875270.1_Ceratina_calcarata'
+	'XP_018013822.1_Hyalella_azteca'
+	'XP_018081845.1_Xenopus_laevis'
+	'XP_018088932.1_Xenopus_laevis'
+	'XP_018110927.1_Xenopus_laevis'
+	'XP_018119349.1_Xenopus_laevis'
+	'XP_018321963.1_Agrilus_planipennis'
+	'XP_018411637.1_Nanorana_parkeri'
+	'XP_018411911.1_Nanorana_parkeri'
+	'XP_018415396.1_Nanorana_parkeri'
+	'XP_018418989.1_Nanorana_parkeri'
+	'XP_018420175.1_Nanorana_parkeri'
+	'XP_018422941.1_Nanorana_parkeri'
+	'XP_018431555.1_Nanorana_parkeri'
+	'XP_018531609.1_Lates_calcarifer'
+	'XP_018534507.1_Lates_calcarifer'
+	'XP_018564680.1_Anoplophora_glabripennis'
+	'XP_018590455.1_Scleropages_formosus'
+	'XP_018620259.1_Scleropages_formosus'
+	'XP_018922163.1_Cyprinus_carpio'
+	'XP_018942348.1_Cyprinus_carpio'
+	'XP_018974847.1_Cyprinus_carpio'
+	'XP_019296886.1_Panthera_pardus'
+	'XP_019333397.1_Alligator_mississippiensis'
+	'XP_019395010.1_Crocodylus_porosus'
+	'XP_019397797.1_Crocodylus_porosus'
+	'XP_019402245.1_Crocodylus_porosus'
+	'XP_019551266.1_Aedes_albopictus'
+	'XP_019599057.1_Rhinolophus_sinicus'
+	'XP_019630513.1_Branchiostoma_belcheri'
+	'XP_019634801.1_Branchiostoma_belcheri'
+	'XP_019643125.1_Branchiostoma_belcheri'
+	'XP_019646409.1_Branchiostoma_belcheri'
+	'XP_019719281.1_Hippocampus_comes'
+	'XP_019873972.1_Aethina_tumida'
+	'XP_019944881.1_Paralichthys_olivaceus'
+	'XP_019948948.1_Paralichthys_olivaceus'
+	'XP_019959764.1_Paralichthys_olivaceus'
+	'XP_020285590.1_Pseudomyrmex_gracilis'
+	'XP_020315315.1_Oncorhynchus_kisutch'
+	'XP_020326297.1_Oncorhynchus_kisutch'
+	'XP_020332537.1_Oncorhynchus_kisutch'
+	'XP_020347907.1_Oncorhynchus_kisutch'
+	'XP_020353659.1_Oncorhynchus_kisutch'
+	'XP_020364459.1_Oncorhynchus_kisutch'
+	'XP_020366594.1_Rhincodon_typus'
+	'XP_020374381.1_Rhincodon_typus'
+	'XP_020374905.1_Rhincodon_typus'
+	'XP_020377578.1_Rhincodon_typus'
+	'XP_020377648.1_Rhincodon_typus'
+	'XP_020378831.1_Rhincodon_typus'
+	'XP_020379883.1_Rhincodon_typus'
+	'XP_020385332.1_Rhincodon_typus'
+	'XP_020451552.1_Monopterus_albus'
+	'XP_020471224.1_Monopterus_albus'
+	'XP_020490984.1_Labrus_bergylta'
+	'XP_020493107.1_Labrus_bergylta'
+	'XP_020503562.1_Labrus_bergylta'
+	'XP_020508149.1_Labrus_bergylta'
+	'XP_020509656.1_Labrus_bergylta'
+	'XP_020600881.1_Orbicella_faveolata'
+	'XP_020601884.1_Orbicella_faveolata'
+	'XP_020601942.1_Orbicella_faveolata'
+	'XP_020604088.1_Orbicella_faveolata'
+	'XP_020620765.1_Orbicella_faveolata'
+	'XP_020627320.1_Orbicella_faveolata'
+	'XP_020629527.1_Orbicella_faveolata'
+	'XP_020631944.1_Orbicella_faveolata'
+	'XP_020642327.1_Pogona_vitticeps'
+	'XP_020648432.1_Pogona_vitticeps'
+	'XP_020651493.1_Pogona_vitticeps'
+	'XP_020653960.1_Pogona_vitticeps'
+	'XP_020663525.1_Pogona_vitticeps'
+	'XP_020712791.1_Ceratitis_capitata'
+	'XP_020778972.1_Boleophthalmus_pectinirostris'
+	'XP_020783235.1_Boleophthalmus_pectinirostris'
+	'XP_020820587.1_Phascolarctos_cinereus'
+	'XP_020821450.1_Phascolarctos_cinereus'
+	'XP_020836613.1_Phascolarctos_cinereus'
+	'XP_020844671.1_Phascolarctos_cinereus'
+	'XP_020855297.1_Phascolarctos_cinereus'
+	'XP_020860208.1_Phascolarctos_cinereus'
+	'XP_020898459.1_Exaiptasia_pallida'
+	'XP_020902779.1_Exaiptasia_pallida'
+	'XP_020904756.1_Exaiptasia_pallida'
+	'XP_020904924.1_Exaiptasia_pallida'
+	'XP_020910715.1_Exaiptasia_pallida'
+	'XP_020912229.1_Exaiptasia_pallida'
+	'XP_020950958.1_Sus_scrofa'
+	'XP_021052170.1_Mus_pahari'
+	'XP_021054314.1_Mus_pahari'
+	'XP_021134000.1_Anas_platyrhynchos'
+	'XP_021232382.1_Numida_meleagris'
+	'XP_021342892.1_Mizuhopecten_yessoensis'
+	'XP_021352427.1_Mizuhopecten_yessoensis'
+	'XP_021352428.1_Mizuhopecten_yessoensis'
+	'XP_021371377.1_Mizuhopecten_yessoensis'
+	'XP_021387927.1_Lonchura_striata_domestica'
+	'XP_021414779.1_Oncorhynchus_mykiss'
+	'XP_021418185.1_Oncorhynchus_mykiss'
+	'XP_021449584.1_Oncorhynchus_mykiss'
+	'XP_021460505.1_Oncorhynchus_mykiss'
+	'XP_021468556.1_Oncorhynchus_mykiss'
+	'XP_021512320.1_Meriones_unguiculatus'
+	'XP_021914180.1_Zootermopsis_nevadensis'
+	'XP_022055238.1_Acanthochromis_polyacanthus'
+	'XP_022058572.1_Acanthochromis_polyacanthus'
+	'XP_022059078.1_Acanthochromis_polyacanthus'
+	'XP_022082473.1_Acanthaster_planci'
+	'XP_022093435.1_Acanthaster_planci'
+	'XP_022105214.1_Acanthaster_planci'
+	'XP_022105980.1_Acanthaster_planci'
+	'XP_022109878.1_Acanthaster_planci'
+	'XP_022184369.1_Nilaparvata_lugens'
+	'XP_022241091.1_Limulus_polyphemus'
+	'XP_022249322.1_Limulus_polyphemus'
+	'XP_022291798.1_Crassostrea_virginica'
+	'XP_022305873.1_Crassostrea_virginica'
+	'XP_022305875.1_Crassostrea_virginica'
+	'XP_022347059.1_Enhydra_lutris_kenyoni'
+	'XP_022353675.1_Enhydra_lutris_kenyoni'
+	'XP_022528737.1_Astyanax_mexicanus'
+	'XP_022535578.1_Astyanax_mexicanus'
+	'XP_022542498.1_Astyanax_mexicanus'
+	'XP_022601850.1_Seriola_dumerili'
+	'XP_022618617.1_Seriola_dumerili'
+	'XP_022624470.1_Seriola_dumerili'
+	'XP_022643437.1_Varroa_destructor'
+	'XP_022643850.1_Varroa_destructor'
+	'XP_022661414.1_Varroa_destructor'
+	'XP_022780408.1_Stylophora_pistillata'
+	'XP_022783838.1_Stylophora_pistillata'
+	'XP_022786491.1_Stylophora_pistillata'
+	'XP_022786553.1_Stylophora_pistillata'
+	'XP_022803149.1_Stylophora_pistillata'
+	'XP_022804711.1_Stylophora_pistillata'
+	'XP_022807607.1_Stylophora_pistillata'
+	'XP_022907583.1_Onthophagus_taurus'
+	'XP_023130658.1_Amphiprion_ocellaris'
+	'XP_023217360.1_Centruroides_sculpturatus'
+	'XP_023221577.1_Centruroides_sculpturatus'
+	'XP_023238696.1_Centruroides_sculpturatus'
+	'XP_023267686.1_Seriola_lalandi_dorsalis'
+	'XP_023269630.1_Seriola_lalandi_dorsalis'
+	'XP_023282977.1_Seriola_lalandi_dorsalis'
+	'XP_023296995.1_Lucilia_cuprina'
+	'XP_023296997.1_Lucilia_cuprina'
+	'XP_023338781.1_Eurytemora_affinis'
+	'XP_545888.5_Canis_lupus_familiaris'
+	'XP_787479.3_Strongylocentrotus_purpuratus'
+	'XP_793197.1_Strongylocentrotus_purpuratus'
+	c1350_g1_i1_Bostrichobranchus_pilularis
+	c2215_g1_i1_Clavelina_lepadiformis
+	c2229_g1_i1_Molgula_manhattensis
+	c23736_Haliclona_amboinensis
+	c2619_g1_i1_Distomus_variolosus
+	c3106_g1_i1_Molgula_manhattensis
+	c35057_Haliclona_amboinensis
+	c38060_Haliclona_tubifera
+	c39302_Haliclona_amboinensis
+	c44061_Haliclona_tubifera
+	c44539_Haliclona_tubifera
+	c46316_Haliclona_amboinensis
+	c4806_g1_i1_Bostrichobranchus_pilularis
+	c50359_Haliclona_tubifera
+	c6345_g1_i1_Bostrichobranchus_pilularis
+	c808_g1_i1_Molgula_manhattensis
+	c823_g1_i1_Distomus_variolosus
+	l134063_Leucosolenia_complicata
+	l188338_Leucosolenia_complicata
+	l35214_Leucosolenia_complicata
+	l75198_Leucosolenia_complicata
+	l83409_Leucosolenia_complicata
+	l98969_Leucosolenia_complicata
+	'm.49735_Ephydatia_muelleri'
+	'm.9608_Ephydatia_muelleri'
+	x001784_Clytia_hemisphaerica
+	x002513_Clytia_hemisphaerica
+	x004364_Clytia_hemisphaerica
+	x005220_Clytia_hemisphaerica
+	x006333_Clytia_hemisphaerica
+	x012989_Clytia_hemisphaerica
+	x100129_Nematostella_vectensis
+	x10647922_Euplokamis_dunlapae
+	x11202_Oscarella_sp
+	x114394_Nematostella_vectensis
+	x116350_Xestospongia_testudinaria
+	x12122637_Beroe_abyssicola
+	x12229543_Bolinopsis_infundibulum
+	x12706152_P_bachei_pileus
+	x128814_Nematostella_vectensis
+	x12881667_Beroe_sp_pink
+	x12915366_Bolinopsis_ashleyi
+	x13057276_Pukia_falcata
+	x13201199_Euplokamis_sp
+	x13379_Oscarella_sp
+	x1342_Oscarella_sp
+	x140501184_Erpetoichthys_calabaricus_37
+	x140501185_C741924_Erpetoichthys_calabaricus_6
+	x140501185_C768971_Erpetoichthys_calabaricus_53
+	x140501187_C384790_Erpetoichthys_calabaricus_56
+	x140501187_Erpetoichthys_calabaricus
+	x14084_Acropora_digitifera
+	x1437_Oscarella_sp
+	x1606_Oscarella_sp
+	x177039_4_Bugula_neritina
+	x185890_5_Bugula_neritina
+	x207787_10_Bugula_neritina
+	x208552_Hydra_magnapapillata
+	x208969_Nematostella_vectensis
+	x210231_Hydra_magnapapillata
+	x210627_6_Bugula_neritina
+	x213292_Hydra_magnapapillata
+	x214339_Hydra_magnapapillata
+	x221030_Hydra_magnapapillata
+	x223227_Hydra_magnapapillata
+	x223228_Hydra_magnapapillata
+	x223440_Hydra_magnapapillata
+	x225322_Hydra_magnapapillata
+	x229779_Hydra_magnapapillata
+	x232022_Hydra_magnapapillata
+	x245329_Nematostella_vectensis
+	x286268_Dryodora_glandiformis
+	x3492_Stylissa_carteri
+	x37469_Xestospongia_testudinaria
+	x37807_Nematostella_vectensis
+	x53236_Sycon_ciliatum
+	x65363_Sycon_ciliatum
+	x6559_Oscarella_sp
+	x67776__Stylissa_carteri
+	x70223_Sycon_ciliatum
+	x705_Oscarella_sp
+	x7646_Oscarella_sp
+	x8518_Oscarella_sp
+	x8818_Oscarella_sp
+	x89099_Sycon_ciliatum
+	x9575_Stylissa_carteri
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (l35214_Leucosolenia_complicata:0.566166,(l98969_Leucosolenia_complicata:0.220338,x89099_Sycon_ciliatum:0.659808)[&TBE=1.0]:0.852018,(x53236_Sycon_ciliatum:0.428369,(((Corticium_candelabrum_6107_:0.700133,x13379_Oscarella_sp:1.367951)[&TBE=0.2]:0.057346,(x006333_Clytia_hemisphaerica:0.808965,(Petrosia_ficiformis_40943:0.796597,x232022_Hydra_magnapapillata:0.489442)[&TBE=0.77]:0.298295)[&TBE=0.97]:0.856031)[&TBE=0.5325]:0.187274,((Corticium_candelabrum_1337_:1.767929,x1606_Oscarella_sp:0.948892)[&TBE=0.27]:0.225541,((x705_Oscarella_sp:1.043635,((l83409_Leucosolenia_complicata:0.304673,x70223_Sycon_ciliatum:0.519721)[&TBE=1.0]:0.913037,(Ircinia_fasciculata_5524:1.53476,(x67776__Stylissa_carteri:1.817758,((Ephydatia_muelleri_25871:0.739635,(Ephydatia_muelleri_17398:0.457931,Ephydatia_muelleri_7412:0.384811)[&TBE=0.69]:0.243222)[&TBE=0.97]:0.640339,(('CAB97129.1_Geodia_cydonium_BHP1':1.541727,('CAB97205.1_Suberites_domuncula_BHP1':0.077899,Pseudospongosorites_suberitoides_1537_:0.191716)[&TBE=0.89]:0.595437)[&TBE=0.725]:0.307102,(Corticium_candelabrum_19263:0.416988,(x37469_Xestospongia_testudinaria:0.308563,'XP_011405690.1_Ampimedon_queenslandica_BHP1':0.567829)[&TBE=0.97]:0.292884)[&TBE=1.0]:0.762412)[&TBE=0.65]:0.316006)[&TBE=0.82875]:0.235913)[&TBE=0.832222]:0.48216)[&TBE=0.755]:0.220767)[&TBE=0.653333]:0.065881)[&TBE=0.612308]:0.305742,(((Corticium_candelabrum_2570:0.736418,x7646_Oscarella_sp:1.019047)[&TBE=0.56]:0.201823,(Corticium_candelabrum_1895:0.565734,(x1437_Oscarella_sp:0.238568,l188338_Leucosolenia_complicata:0.653043)[&TBE=0.99]:0.464058)[&TBE=0.875]:0.434887)[&TBE=0.5425]:0.30584,(('ANR94960.1_Trichoplax_adhaerens':1.001822,((((x128814_Nematostella_vectensis:0.10074,(FK753932_Anemonia_viridis:0.147382,CL156_Metridium_senile:0.094298)[&TBE=0.87]:0.093578)[&TBE=0.885]:0.212954,(B034_Acropora_millepora:0.152153,(CL1397_Montastrea_faveolata:0.044421,GE912691_Porites_astreoides:0.150317)[&TBE=0.78]:0.03062)[&TBE=0.735]:0.119549)[&TBE=0.908]:0.705416,((x005220_Clytia_hemisphaerica:0.5705,(x213292_Hydra_magnapapillata:0.252965,x223440_Hydra_magnapapillata:0.040202)[&TBE=0.96]:0.218391)[&TBE=0.98]:0.360551,(('XP_001634697.1_Nematostella_vectensis':0.267433,('XP_020912229.1_Exaiptasia_pallida':0.058739,CL1006_Metridium_senile:0.024229)[&TBE=1.0]:0.165798)[&TBE=0.9]:0.08995,(CL443_Porites_astreoides:0.227403,(('XP_020601884.1_Orbicella_faveolata':0.039631,'XP_022786491.1_Stylophora_pistillata':0.181181)[&TBE=0.46]:0.050065,('XP_015757234.1_Acropora_digitifera':1.0E-6,(CL645_Acropora_palmata:0.00998,B032_Acropora_millepora:1.0E-6)[&TBE=0.41]:1.0E-6)[&TBE=1.0]:0.186199)[&TBE=0.8575]:0.08152)[&TBE=0.96]:0.127573)[&TBE=0.96125]:0.23063)[&TBE=0.92]:0.31418)[&TBE=0.618235]:0.114099,((('XP_014784272.1_Octopus_bimaculoides':0.464932,((('XP_021352428.1_Mizuhopecten_yessoensis':0.148972,'AGK88246.1_Mytilus_galloprovincialis':0.334257)[&TBE=0.83]:0.152669,('XP_021352427.1_Mizuhopecten_yessoensis':0.51879,('XP_022305873.1_Crassostrea_virginica':0.030639,'XP_011449013.1_Crassostrea_gigas':0.073743)[&TBE=0.99]:0.42402)[&TBE=0.67]:0.208212)[&TBE=0.4175]:0.113913,('XP_022305875.1_Crassostrea_virginica':0.632339,(('XP_005103752.1_Aplysia_californica':0.191162,'XP_013081872.1_Biomphalaria_glabrata':0.386992)[&TBE=1.0]:0.360488,(BW639957_Dugesia_ryukyuensis:1.913087,'XP_009067239.1_Lottia_gigantea':0.221909)[&TBE=0.05]:0.150334)[&TBE=0.56]:0.066773)[&TBE=0.5125]:0.094595)[&TBE=0.372222]:0.051284)[&TBE=0.358]:0.086257,((x207787_10_Bugula_neritina:1.229519,x177039_4_Bugula_neritina:0.44311)[&TBE=0.9]:0.928768,(('KFM57241.1_Stegodyphus_mimosarum':0.583881,('XP_015927755.1_Parasteatoda_tepidariorum':0.397925,'XP_015927756.1_Parasteatoda_tepidariorum':0.13873)[&TBE=0.9]:0.425455)[&TBE=0.915]:0.292535,(('XP_023217360.1_Centruroides_sculpturatus':0.025893,'XP_023221577.1_Centruroides_sculpturatus':0.424919)[&TBE=0.91]:0.591214,(('XP_013785182.1_Limulus_polyphemus':0.24694,'XP_013781657.1_Limulus_polyphemus':0.197174)[&TBE=0.97]:0.570724,('XP_002411625.1_Ixodes_scapularis':0.439018,('XP_003744196.1_Galendromus_occidentalis':1.396508,('XP_022643437.1_Varroa_destructor':0.288802,'XP_022643850.1_Varroa_destructor':0.942408)[&TBE=0.83]:0.40763)[&TBE=0.77]:0.357188)[&TBE=0.82]:0.309451)[&TBE=0.726]:0.060201)[&TBE=0.807143]:0.152919)[&TBE=0.884]:0.305056)[&TBE=0.755833]:0.134582)[&TBE=0.402609]:0.052715,(('XP_002740789.2_Saccoglossus_kowalevskii':0.463464,(GAZO01002368:0.5974,(('PIK39763.1_Apostichopus_japonicus':0.133831,GAUT01024010:0.11988)[&TBE=1.0]:0.192796,((GAVF01025664:0.122366,(GAUR01024901:0.008457,'XP_011669020.1_Strongylocentrotus_purpuratus':0.061986)[&TBE=0.7]:0.051105)[&TBE=0.975]:0.184469,(GAUQ01074119:0.227562,((GAVE01040088:0.019799,GAVP01076185:0.060635)[&TBE=0.89]:0.060243,('XP_022109878.1_Acanthaster_planci':0.042198,(GAVQ01042688:0.041138,(GAVK01062196:0.035057,GAVI01043083:0.100327)[&TBE=0.25]:0.019504)[&TBE=0.44]:0.010057)[&TBE=0.66]:0.027894)[&TBE=0.772]:0.06383)[&TBE=0.75]:0.097344)[&TBE=0.814444]:0.094641)[&TBE=0.959091]:0.26732)[&TBE=0.990833]:0.897974)[&TBE=0.914615]:0.036517,('XP_019630513.1_Branchiostoma_belcheri':0.627133,(((c808_g1_i1_Molgula_manhattensis:0.859208,c4806_g1_i1_Bostrichobranchus_pilularis:0.747192)[&TBE=0.96]:0.522946,(CJ353991_Molgula_tectiformis:0.361887,(TRINITY_DN28979_c1_g1_i1_Doliolum_nationalis:0.378484,(TRINITY_DN13804_c5_g1_i1_Salpa_fusiformis:0.601608,(c2215_g1_i1_Clavelina_lepadiformis:0.394258,'XP_002127107.1_Ciona_intestinalis':0.187537)[&TBE=0.43]:0.152915)[&TBE=0.425]:0.092586)[&TBE=0.686667]:0.410499)[&TBE=0.765]:0.215486)[&TBE=0.985]:1.044644,((JL8663_Lethenteron_japonicum:0.713871,(('XP_020385332.1_Rhincodon_typus':0.091404,'XP_007898732.1_Callorhinchus_milii':0.139975)[&TBE=1.0]:0.458161,((('XP_002934442.1_Xenopus_tropicalis':0.041101,'XP_018420175.1_Nanorana_parkeri':0.117561)[&TBE=1.0]:0.201723,('XP_019397797.1_Crocodylus_porosus':0.027241,('XP_006122944.1_Pelodiscus_sinensis':0.03817,('XP_005149994.1_Melopsittacus_undulatus':0.037179,(('XP_020642327.1_Pogona_vitticeps':0.028517,('XP_007426734.1_Python_bivittatus':0.018561,'XP_013925506.1_Thamnophis_sirtalis':0.050467)[&TBE=1.0]:0.089653)[&TBE=0.925]:0.074429,('XP_003759697.1_Sarcophilus_harrisii':0.022214,('NP_000624.2_Homo_sapiens_BCL2':1.0E-6,'NP_033871.2_Mus_musculus':0.009962)[&TBE=0.96]:0.028821)[&TBE=0.935]:0.052201)[&TBE=0.658]:0.02002)[&TBE=0.676667]:0.010484)[&TBE=0.775714]:0.021938)[&TBE=0.83875]:0.046801)[&TBE=0.919]:0.087418,(x140501185_C741924_Erpetoichthys_calabaricus_6:0.209458,(RSZYR131205712144_Polyodon_spathula_2743_0_31:0.147542,((WHYR1501014242488_Atractosteus_spatula_122603_0_21:1.0E-6,'XP_015210187.1_Lepisosteus_oculatus':0.016291)[&TBE=0.55]:0.020222,((('XP_010897651.1_Esox_lucius':0.142551,('XP_020364459.1_Oncorhynchus_kisutch':0.035861,'XP_021418185.1_Oncorhynchus_mykiss':0.034383)[&TBE=0.54]:0.010013)[&TBE=0.745]:0.067176,('XP_012670557.1_Clupea_harengus':0.227871,(('NP_001025424.1_Danio_rerio':0.078829,'XP_016353976.1_Sinocyclocheilus_anshuiensis':0.111471)[&TBE=1.0]:0.174335,('XP_017565913.1_Pygocentrus_nattereri':0.081554,'XP_007258676.2_Astyanax_mexicanus':0.06595)[&TBE=1.0]:0.228647)[&TBE=0.613333]:0.038194)[&TBE=0.65]:0.023062)[&TBE=0.715714]:0.01923,('XP_012672972.1_Clupea_harengus':0.048584,(('XP_001341214.1_Danio_rerio':0.142946,'XP_016320172.1_Sinocyclocheilus_anshuiensis':0.044047)[&TBE=1.0]:0.098222,('XP_010728299.1_Larimichthys_crocea':1.0E-6,('XP_020451552.1_Monopterus_albus':0.050131,('XP_022058572.1_Acanthochromis_polyacanthus':0.009834,('XP_023282977.1_Seriola_lalandi_dorsalis':0.046738,'XP_020493107.1_Labrus_bergylta':0.025429)[&TBE=0.39]:0.007922)[&TBE=0.505]:0.009898)[&TBE=0.756667]:0.019884)[&TBE=0.995]:0.225072)[&TBE=0.898333]:0.019889)[&TBE=0.982857]:0.174475)[&TBE=0.820667]:0.039021)[&TBE=0.816471]:0.018636)[&TBE=0.850556]:0.07561)[&TBE=0.852632]:0.112403)[&TBE=0.984667]:0.191617)[&TBE=0.990625]:0.195055)[&TBE=0.966667]:0.041157,(PMZ_0036959_RA_Petromyzon_marinus:0.688818,(('XP_006008143.1_Latimeria_chalumnae':0.36299,((('XP_018411637.1_Nanorana_parkeri':0.049959,'PIO37174.1_Rana_catesbeiana':0.034487)[&TBE=1.0]:0.093688,('NP_001011065.1_Xenopus_tropicalis':0.008231,'NP_001085729.1_Xenopus_laevis':0.032357)[&TBE=0.73]:0.02365)[&TBE=1.0]:0.239009,('XP_012400275.1_Sarcophilus_harrisii':1.0E-6,('XP_020820587.1_Phascolarctos_cinereus':0.009937,('XP_001512467.1_Ornithorhynchus_anatinus':0.070818,('XP_008267599.1_Oryctolagus_cuniculus':0.102369,('NP_004041.1_Homo_sapiens_BCLW':0.008149,'NP_031563.1_Mus_musculus':0.011744)[&TBE=0.57]:0.020205)[&TBE=0.81]:0.021698)[&TBE=0.85]:1.0E-6)[&TBE=0.9075]:0.009918)[&TBE=1.0]:0.300478)[&TBE=0.983333]:0.163302)[&TBE=0.974]:0.169824,((('XP_007903343.1_Callorhinchus_milii':0.222506,'XP_020378831.1_Rhincodon_typus':0.219468)[&TBE=0.61]:0.068955,('XP_018411911.1_Nanorana_parkeri':0.214048,('OCT62575.1_Xenopus_laevis':0.072724,'NP_001005428.1_Xenopus_tropicalis':0.045283)[&TBE=1.0]:0.185452)[&TBE=0.98]:0.27723)[&TBE=0.8375]:0.162713,((('NP_612815.1_Homo_sapiens_BCLX':0.049698,('XP_012409072.1_Sarcophilus_harrisii':0.020576,'XP_001362850.1_Monodelphis_domestica':0.009085)[&TBE=0.56]:0.021267)[&TBE=0.645]:0.029614,(('XP_019395010.1_Crocodylus_porosus':0.019461,('XP_007062552.1_Chelonia_mydas':0.039985,('NP_001020475.1_Gallus_gallus':0.019744,'XP_009281021.1_Aptenodytes_forsteri':0.009803)[&TBE=0.9]:0.02001)[&TBE=0.57]:1.0E-6)[&TBE=0.576667]:0.018211,('XP_015266744.1_Gekko_japonicus':0.059161,('XP_003229025.1_Anolis_carolinensis':0.077336,('XP_020663525.1_Pogona_vitticeps':0.029134,('XP_007439373.1_Python_bivittatus':1.0E-6,'XP_013918940.1_Thamnophis_sirtalis':0.040006)[&TBE=0.87]:0.04126)[&TBE=0.645]:0.029858)[&TBE=0.783333]:0.015485)[&TBE=0.785]:0.012319)[&TBE=0.8175]:0.068624)[&TBE=0.824545]:0.089586,('XP_006008757.1_Latimeria_chalumnae':0.281904,((RSZYR1312057137359_Polyodon_spathula_64750_0_29:0.047432,(x140501184_Erpetoichthys_calabaricus_37:0.172336,x140501187_Erpetoichthys_calabaricus:0.065054)[&TBE=0.47]:0.04621)[&TBE=0.485]:0.051366,(('XP_010769745.1_Notothenia_coriiceps':0.219938,'XP_020347907.1_Oncorhynchus_kisutch':0.057565)[&TBE=0.55]:0.047261,(('XP_016100712.1_Sinocyclocheilus_grahami':0.062363,'XP_007249986.2_Astyanax_mexicanus':0.02087)[&TBE=0.43]:0.027318,(('XP_020315315.1_Oncorhynchus_kisutch':0.042983,'XP_010873822.1_Esox_lucius':0.069028)[&TBE=0.8]:0.029859,('XP_006639703.1_Lepisosteus_oculatus':0.098321,(('XP_004565541.1_Maylandia_zebra':0.01752,('XP_011475079.2_Oryzias_latipes':0.087165,'XP_005806267.1_Xiphophorus_maculatus':0.144042)[&TBE=0.48]:0.020286)[&TBE=0.705]:0.013129,(('XP_003978225.1_Takifugu_rubripes':0.080965,('XP_010741994.1_Larimichthys_crocea':0.044749,'XP_020490984.1_Labrus_bergylta':0.074106)[&TBE=0.64]:0.015233)[&TBE=0.515]:0.012101,(('XP_022618617.1_Seriola_dumerili':0.061346,'XP_018534507.1_Lates_calcarifer':1.0E-6)[&TBE=0.31]:1.0E-6,('XP_019944881.1_Paralichthys_olivaceus':0.044192,'XP_008316516.1_Cynoglossus_semilaevis':0.125984)[&TBE=0.72]:0.049839)[&TBE=0.53]:0.010162)[&TBE=0.685]:0.009909)[&TBE=0.95]:0.056694)[&TBE=0.89]:0.019886)[&TBE=0.830833]:0.023571)[&TBE=0.921429]:0.030324)[&TBE=0.98375]:0.161778)[&TBE=0.955263]:0.115646)[&TBE=0.9285]:0.025108)[&TBE=0.779375]:0.085404)[&TBE=0.801892]:0.12721)[&TBE=0.744375]:0.041156)[&TBE=0.744286]:0.075131)[&TBE=0.985904]:0.456569)[&TBE=0.909222]:1.0E-6)[&TBE=0.900659]:0.121531)[&TBE=0.78219]:0.01365)[&TBE=0.80845]:0.23658)[&TBE=0.741973]:0.05599)[&TBE=0.739662]:0.090194,((((x1342_Oscarella_sp:0.669448,('XP_002609844.1_Branchiostoma_floridae':2.574701,(('AM040446.1_Lubomirskia_baicalensis_BHP2':0.054354,Ephydatia_muelleri_18578:0.151628)[&TBE=1.0]:1.229507,(Petrosia_ficiformis_1467:0.608184,'XM_003386685.3_Amphimedon_queenslandica':1.101369)[&TBE=0.85]:0.513293)[&TBE=0.533333]:0.238048)[&TBE=0.4875]:0.477522)[&TBE=0.418]:0.159337,(((Chondrilla_nucula_7779_:2.064667,Chondrilla_nucula_6556:0.952517)[&TBE=0.42]:0.530359,((Pseudospongosorites_suberitoides_426_:0.277731,'CAF74919.1_Suberites_domuncula_BHP2':0.086372)[&TBE=0.99]:0.88318,(c44539_Haliclona_tubifera:0.783053,('XP_011409569.1_Amphimedon_queenslandica_BHP2':0.483558,(c46316_Haliclona_amboinensis:0.338275,x116350_Xestospongia_testudinaria:0.292388)[&TBE=0.45]:0.114077)[&TBE=0.75]:0.084614)[&TBE=0.94]:0.289577)[&TBE=0.834]:0.200245)[&TBE=0.821429]:0.293371,((Ircinia_fasciculata_2573_:1.618129,(Chondrilla_nucula_4422_:1.176997,'MF380423.1_Chondrosia_reniformis_BHP2':0.597052)[&TBE=0.9]:0.692131)[&TBE=0.725]:0.29854,('AJ293508.1_Geodia_cydonium_BHP2':1.667568,((Ephydatia_muelleri_20417:0.084978,'m.49735_Ephydatia_muelleri':0.164639)[&TBE=1.0]:1.117957,(Pseudospongosorites_suberitoides_9444:1.172578,('XP_003386092.1_Amphimedon_queenslandica_BHP2':0.902362,(c39302_Haliclona_amboinensis:0.453465,(c38060_Haliclona_tubifera:0.918214,c23736_Haliclona_amboinensis:0.19252)[&TBE=0.53]:0.234487)[&TBE=0.67]:0.172986)[&TBE=0.936667]:0.648901)[&TBE=0.8475]:0.395555)[&TBE=0.8]:0.207161)[&TBE=0.86]:0.132624)[&TBE=0.912]:0.635855)[&TBE=0.613333]:0.205882)[&TBE=0.548333]:0.38394,('XP_002110477.1_Trichoplax_adhaerens':1.749268,(((('XP_020904756.1_Exaiptasia_pallida':0.17612,'XP_001629527.1_Nematostella_vectensis':0.182)[&TBE=0.83]:0.116258,(('XP_022807607.1_Stylophora_pistillata':0.101961,'XP_020600881.1_Orbicella_faveolata':0.067073)[&TBE=0.82]:0.125344,(CL5507_Acropora_palmata:1.0E-6,'XP_015759441.1_Acropora_digitifera':0.018618)[&TBE=1.0]:0.124841)[&TBE=0.71]:0.059096)[&TBE=0.946]:0.47493,((('XP_015751397.1_Acropora_digitifera':0.299825,('XP_020631944.1_Orbicella_faveolata':0.122281,'XP_022780408.1_Stylophora_pistillata':0.213451)[&TBE=0.96]:0.166118)[&TBE=0.955]:0.306416,(FK735856_Anemonia_viridis:0.126288,(x208969_Nematostella_vectensis:0.389207,'XP_020904924.1_Exaiptasia_pallida':0.113644)[&TBE=0.64]:0.120885)[&TBE=0.91]:0.250958)[&TBE=0.852]:0.289186,(((x004364_Clytia_hemisphaerica:0.717994,x208552_Hydra_magnapapillata:0.899228)[&TBE=0.97]:1.065662,(x214339_Hydra_magnapapillata:0.651811,x002513_Clytia_hemisphaerica:0.809324)[&TBE=1.0]:0.526791)[&TBE=0.39]:0.298436,(Ircinia_fasciculata_112:2.058655,(((BW636486_Dugesia_ryukyuensis:2.520128,(CL533_Anemonia_viridis:0.082037,CL3671_Metridium_senile:0.358007)[&TBE=0.9]:0.668696)[&TBE=0.675]:0.763355,(x210231_Hydra_magnapapillata:1.0E-6,(CO536156_Hydractinia_echinata:0.540858,x012989_Clytia_hemisphaerica:1.590702)[&TBE=0.64]:0.473834)[&TBE=0.845]:0.615548)[&TBE=0.468]:0.180525,(('XP_022804711.1_Stylophora_pistillata':0.209758,('XP_020629527.1_Orbicella_faveolata':0.176883,('XP_015755186.1_Acropora_digitifera':1.0E-6,GW217795_Acropora_palmata:0.070501)[&TBE=0.89]:0.257067)[&TBE=0.695]:0.114186)[&TBE=0.956667]:0.395151,('XP_001626412.1_Nematostella_vectensis':0.234118,(CL263_Anemonia_viridis:0.328881,('XP_020898459.1_Exaiptasia_pallida':0.250749,CL253_Metridium_senile:0.094261)[&TBE=0.97]:0.219685)[&TBE=0.91]:0.194239)[&TBE=0.826667]:0.244304)[&TBE=0.755714]:0.117484)[&TBE=0.592308]:0.180692)[&TBE=0.557857]:0.033345)[&TBE=0.478333]:0.154348)[&TBE=0.508333]:0.132418)[&TBE=0.506333]:0.207672,(((('XP_013403667.1_Lingula_anatina':0.768591,('ELT87488.1_Capitella_teleta':1.254699,('XP_009009884.1_Helobdella_robusta':0.976166,'ELT91516.1_Capitella_teleta':0.367957)[&TBE=1.0]:0.954507)[&TBE=0.81]:0.234223)[&TBE=0.566667]:0.181477,(('XP_009061217.1_Lottia_gigantea':0.216479,(l134063_Leucosolenia_complicata:0.182404,('XP_005089109.1_Aplysia_californica':0.159349,'XP_013065969.1_Biomphalaria_glabrata':0.139588)[&TBE=0.96]:0.211051)[&TBE=0.705]:0.08404)[&TBE=0.656667]:0.045293,(('XP_011436990.1_Crassostrea_gigas':0.218351,'XP_021342892.1_Mizuhopecten_yessoensis':0.142525)[&TBE=0.36]:0.094087,('XP_014770366.1_Octopus_bimaculoides':0.594723,('AGM14600.1_Ruditapes_philippinarum':0.104305,'APY24039.1_Corbicula_fluminea':0.593207)[&TBE=0.99]:0.169845)[&TBE=0.68]:0.056843)[&TBE=0.8]:0.135543)[&TBE=0.99625]:0.433135)[&TBE=0.798333]:0.220695,(('XP_022249322.1_Limulus_polyphemus':0.364281,'XP_022241091.1_Limulus_polyphemus':0.383763)[&TBE=0.99]:0.960618,('AST14854.1_Macrobrachium_olfersii':0.854905,('XP_012527858.1_Monomorium_pharaonis':0.018772,(('XP_011342847.1_Ooceraea_biroi':0.077217,'XP_011254927.1_Camponotus_floridanus':0.027963)[&TBE=0.49]:0.009303,('XP_020285590.1_Pseudomyrmex_gracilis':0.086619,('XP_014612270.1_Polistes_canadensis':0.258804,('XP_012281833.1_Orussus_abietinus':0.115513,(('XP_015120417.1_Diachasma_alloeum':0.088743,('XP_014209925.1_Copidosoma_floridanum':0.090681,'XP_014224430.1_Trichogramma_pretiosum':0.086986)[&TBE=0.65]:0.042361)[&TBE=0.395]:1.0E-6,(('XP_003700280.2_Megachile_rotundata':0.028917,'OAD46914.1_Eufriesea_mexicana':0.038404)[&TBE=0.53]:1.0E-6,('XP_015429740.1_Dufourea_novaeangliae':0.099042,'XP_003486071.1_Bombus_impatiens':1.0E-6)[&TBE=0.61]:0.019172)[&TBE=0.753333]:0.039703)[&TBE=0.576667]:0.004153)[&TBE=0.691429]:0.014099)[&TBE=0.785]:0.082447)[&TBE=0.817778]:0.008034)[&TBE=0.914545]:1.0E-6)[&TBE=0.9975]:0.767695)[&TBE=0.973846]:0.176565)[&TBE=0.949333]:0.259661)[&TBE=0.656786]:0.190857,(('XP_002730739.1_Saccoglossus_kowalevskii':0.412625,(GAZO01002563:0.481148,((GAUT01050249:0.320088,(GAVO01021433:0.044362,'PIK47408.1_Apostichopus_japonicus':0.078088)[&TBE=0.97]:0.205906)[&TBE=0.955]:0.282525,((GAZP01025502:0.043647,(GAVF01073262:0.073631,(GAVR01050148:0.031026,(EC433855_Strongylocntrotus_purpuratus:0.068158,'XP_787479.3_Strongylocentrotus_purpuratus':1.0E-6)[&TBE=0.95]:0.054823)[&TBE=0.745]:0.037517)[&TBE=0.966667]:0.092696)[&TBE=0.9825]:0.156657,(GAUQ01107449:0.31013,((GAVI01054851:0.009442,(GAVC01066868:0.018406,GAVJ01047395:0.028151)[&TBE=0.56]:0.009458)[&TBE=0.89]:0.066763,(GAVP01114678:0.140513,(GAVQ01011048:0.081569,(GAVK01088632:0.012704,'XP_022105214.1_Acanthaster_planci':0.15434)[&TBE=0.74]:0.034693)[&TBE=0.71]:0.014309)[&TBE=0.806667]:0.054349)[&TBE=0.996667]:0.187551)[&TBE=0.938571]:0.092312)[&TBE=0.97]:0.229905)[&TBE=0.960667]:0.133083)[&TBE=0.97375]:0.301743)[&TBE=0.968824]:0.609281,(('XP_019643125.1_Branchiostoma_belcheri':1.0E-6,'XP_002591187.1_Branchiostoma_floridae':0.221758)[&TBE=1.0,!cartoon={2,4.406637}]:0.769267,((c2619_g1_i1_Distomus_variolosus:0.526853,(c2229_g1_i1_Molgula_manhattensis:0.537042,(CJ418536_Molgula_tectiformis:0.306387,c1350_g1_i1_Bostrichobranchus_pilularis:0.761309)[&TBE=0.82]:0.156282)[&TBE=0.9]:0.253403)[&TBE=0.976667]:0.477998,((JL14075_Lethenteron_japonicum:0.002315,('XP_007904307.1_Callorhinchus_milii':1.0E-6,(('XP_020374905.1_Rhincodon_typus':0.052468,SmallerSpottedCatshark_TranscriptomeContig14499:0.026634)[&TBE=0.89,!cartoon={2,3.3938369999999995}]:0.072313,(('XP_017329063.1_Ictalurus_punctatus':0.289627,('XP_022535578.1_Astyanax_mexicanus':0.116597,('NP_919379.1_Danio_rerio':0.272281,('XP_012670407.1_Clupea_harengus':0.208158,(('XP_006628719.1_Lepisosteus_oculatus':0.147695,(RSZYR1312057133245_Polyodon_spathula_55205_0_47:0.356529,x140501187_C384790_Erpetoichthys_calabaricus_56:0.432097)[&TBE=0.46]:0.110307)[&TBE=0.885]:0.325168,(('XP_010889567.1_Esox_lucius':0.084203,'XP_020332537.1_Oncorhynchus_kisutch':0.057118)[&TBE=1.0]:0.250109,(('XP_020503562.1_Labrus_bergylta':0.083239,('XP_010770400.1_Notothenia_coriiceps':0.103548,('ACZ62638.1_Gadus_morhua':0.215614,'XP_023267686.1_Seriola_lalandi_dorsalis':0.16753)[&TBE=0.15]:0.028513)[&TBE=0.08]:0.010501)[&TBE=0.1]:0.011793,('XP_005748942.1_Pundamilia_nyererei':0.207537,(('XP_003969611.1_Takifugu_rubripes':0.121185,('XP_008304234.1_Stegastes_partitus':0.057523,'XP_022055238.1_Acanthochromis_polyacanthus':0.068425)[&TBE=0.82]:0.021693)[&TBE=0.55]:0.016706,('XP_010741161.2_Larimichthys_crocea':0.129488,('XP_012706384.1_Fundulus_heteroclitus':0.092186,'XP_007549112.1_Poecilia_formosa':0.074825)[&TBE=1.0]:0.330416)[&TBE=0.54]:0.013765)[&TBE=0.482]:0.007985)[&TBE=0.575]:0.012196)[&TBE=0.866]:0.122923)[&TBE=0.9725]:0.209219)[&TBE=0.847333]:0.078659)[&TBE=0.86875]:0.052795)[&TBE=0.895294]:0.057674)[&TBE=0.926667]:0.147665)[&TBE=0.948421]:0.676695,('XP_006009177.1_Latimeria_chalumnae':0.50822,((('XP_015679194.1_Protobothrops_mucrosquamatus':0.079338,'XP_015274278.1_Gekko_japonicus':0.242694)[&TBE=0.85]:0.153165,('XP_005305121.1_Chrysemys_picta_bellii':0.157561,(('OXB79959.1_Colinus_virginianus':0.021004,'NP_989853.1_Gallus_gallus':0.040621)[&TBE=1.0]:0.080093,('KQL61250.1_Amazona_aestiva':0.082651,'XP_015494961.1_Parus_major':0.043719)[&TBE=0.62]:0.038182)[&TBE=1.0]:0.209462)[&TBE=0.91]:0.107023)[&TBE=0.93]:0.344967,((('XP_018110927.1_Xenopus_laevis':0.24457,'XP_002936386.1_Xenopus_tropicalis':0.113912)[&TBE=1.0]:0.467608,('PIO24038.1_Rana_catesbeiana':0.3184,'XP_018431555.1_Nanorana_parkeri':0.123056)[&TBE=1.0]:0.363989)[&TBE=0.98]:0.417433,(('XP_007480024.1_Monodelphis_domestica':0.221415,'XP_020836613.1_Phascolarctos_cinereus':0.083872)[&TBE=1.0]:1.01661,((('XP_015335722.1_Marmota_marmota_marmota':0.053528,'XP_005316985.2_Ictidomys_tridecemlineatus':0.032358)[&TBE=0.99]:0.19897,('XP_008827992.1_Nannospalax_galili':0.286971,(('NP_038507.1_Mus_musculus':0.264739,'NP_446185.1_Rattus_norvegicus':0.216382)[&TBE=1.0]:0.231165,('XP_005073785.1_Mesocricetus_auratus':0.328772,('OBS66301.1_Neotoma_lepida':0.120196,'XP_006973851.1_Peromyscus_maniculatus_bairdii':0.20238)[&TBE=0.77]:0.087929)[&TBE=0.795]:0.068107)[&TBE=0.9675]:0.147984)[&TBE=0.984]:0.276849)[&TBE=0.848571]:0.06216,('XP_003784670.1_Otolemur_garnettii':0.231646,(('XP_008267216.1_Oryctolagus_cuniculus':0.24287,(('XP_012513507.1_Propithecus_coquereli':0.271564,'XP_008070772.1_Carlito_syrichta':0.198666)[&TBE=0.14]:0.029924,(('XP_003941668.1_Saimiri_boliviensis_boliviensis':0.060163,'XP_012297833.1_Aotus_nancymaae':0.027209)[&TBE=1.0]:0.178185,('XP_001085850.1_Macaca_mulatta':0.034292,('NP_065129.1_Homo_sapiens_NRH':0.043685,'XP_002825511.1_Pongo_abelii':0.023588)[&TBE=0.75]:0.034494)[&TBE=0.94]:0.025331)[&TBE=0.95]:0.07331)[&TBE=0.851667]:0.059389)[&TBE=0.867143]:0.071122,(('XP_020950958.1_Sus_scrofa':0.265461,('DAA20882.1_Bos_taurus':0.021253,'XP_012036939.2_Ovis_aries':0.053865)[&TBE=1.0]:0.274784)[&TBE=0.98]:0.240603,('XP_016018153.1_Rousettus_aegyptiacus':0.367587,('XP_019296886.1_Panthera_pardus':0.114177,(('XP_004755468.2_Mustela_putorius_furo':0.048737,'XP_022347059.1_Enhydra_lutris_kenyoni':1.0E-6)[&TBE=0.76]:0.047085,('XP_011228882.2_Ailuropoda_melanoleuca':0.039869,('XP_006733384.1_Leptonychotes_weddellii':0.02086,'XP_004396639.1_Odobenus_rosmarus_divergens':0.047388)[&TBE=1.0]:0.057771)[&TBE=0.76]:0.027955)[&TBE=0.93]:0.139872)[&TBE=0.942]:0.138363)[&TBE=0.836667]:0.098233)[&TBE=0.863333]:0.108175)[&TBE=0.682353]:0.054522)[&TBE=0.713333]:0.017837)[&TBE=1.0]:0.728761)[&TBE=0.971429]:0.255108)[&TBE=0.958125]:0.225863)[&TBE=0.959231]:0.247286)[&TBE=0.95725]:0.306177)[&TBE=0.963833]:0.772526)[&TBE=0.948226]:0.099179)[&TBE=0.963016]:0.054174)[&TBE=0.977344]:1.12198,(((LittleSkate_TranscriptomeContig18668:0.367794,('XP_020377578.1_Rhincodon_typus':0.309494,SmallerSpottedCatshark_TranscriptomeContig15482:0.252671)[&TBE=0.95]:0.168945)[&TBE=0.99]:0.449052,(('XP_007440729.1_Python_bivittatus':0.063143,('XP_013927897.1_Thamnophis_sirtalis':0.121171,'XP_015670779.1_Protobothrops_mucrosquamatus':0.066294)[&TBE=0.92]:0.128079)[&TBE=0.965]:0.21861,((('XP_019333397.1_Alligator_mississippiensis':0.120612,'NP_990197.1_Gallus_gallus':0.234312)[&TBE=0.6]:0.043957,('XP_005301749.1_Chrysemys_picta_bellii':0.053134,('XP_007066911.1_Chelonia_mydas':0.040419,'XP_014437116.1_Pelodiscus_sinensis':0.062542)[&TBE=0.48]:0.009404)[&TBE=0.965]:0.122087)[&TBE=0.8]:0.100864,('XP_007662952.1_Ornithorhynchus_anatinus':0.391647,(('XP_003755544.1_Sarcophilus_harrisii':0.040095,('XP_001368168.1_Monodelphis_domestica':0.058744,'XP_020821450.1_Phascolarctos_cinereus':0.059211)[&TBE=0.67]:0.018807)[&TBE=0.95]:0.21088,('XP_008579524.1_Galeopterus_variegatus':0.011497,('NP_031560.2_Mus_musculus':0.284639,('XP_012515547.1_Propithecus_coquereli':0.137958,('XP_008066694.1_Carlito_syrichta':0.071824,('XP_003413903.1_Loxodonta_africana':0.131953,(('XP_019599057.1_Rhinolophus_sinicus':0.103425,'XP_545888.5_Canis_lupus_familiaris':0.246233)[&TBE=0.51]:0.085697,('XP_012322342.1_Aotus_nancymaae':0.10032,(Homo_sapiens_BFL1:0.028362,'XP_003901335.1_Papio_anubis':0.024852)[&TBE=0.62]:0.02674)[&TBE=0.755]:0.010796)[&TBE=0.505]:0.009394)[&TBE=0.476]:1.0E-6)[&TBE=0.626667]:0.009002)[&TBE=0.745714]:0.003084)[&TBE=0.86]:0.030727)[&TBE=0.952222]:0.160207)[&TBE=0.938333]:0.091306)[&TBE=0.941538]:0.344569)[&TBE=0.886667]:0.165734)[&TBE=0.97381]:0.696521)[&TBE=0.998333]:1.24916,((Eb_CT003224_b2:1.040713,PMZ_0017448_RA_Petromyzon_marinus:0.930103)[&TBE=0.79]:0.38955,(('XP_007883445.1_Callorhinchus_milii':0.462088,(SmallerSpottedCatshark_TranscriptomeContig67033:0.122416,'XP_020379883.1_Rhincodon_typus':0.146924)[&TBE=0.93]:0.144642)[&TBE=0.95]:0.408061,(('XP_006001242.1_Latimeria_chalumnae':0.440064,((('XP_018088932.1_Xenopus_laevis':0.089994,'XP_002935512.1_Xenopus_tropicalis':0.058218)[&TBE=1.0]:0.288768,('AFP89968.1_Bufo_japonicus_formosus':0.167518,'XP_018415396.1_Nanorana_parkeri':0.309779)[&TBE=0.64]:0.148765)[&TBE=0.973333]:0.241435,(('XP_015677514.1_Protobothrops_mucrosquamatus':0.167553,('XP_020653960.1_Pogona_vitticeps':0.038774,'XP_003229076.1_Anolis_carolinensis':0.193034)[&TBE=0.66]:0.060665)[&TBE=0.925]:0.140227,(('XP_006273359.1_Alligator_mississippiensis':0.119062,('XP_005293860.1_Chrysemys_picta_bellii':0.058139,(('XP_020860208.1_Phascolarctos_cinereus':0.072283,'XP_001370877.1_Monodelphis_domestica':0.034646)[&TBE=0.75]:0.041114,('XP_005008796.1_Cavia_porcellus':0.067143,('XP_021052170.1_Mus_pahari':0.067168,'NP_068779.1_Homo_sapiens_MCL1':0.0086)[&TBE=0.94]:0.026624)[&TBE=0.955]:0.073485)[&TBE=1.0]:0.210526)[&TBE=0.872]:0.045499)[&TBE=0.761667]:0.026226,(('NP_001306238.1_Gallus_gallus':0.043472,('OXB55796.1_Callipepla_squamata':0.033698,'XP_021232382.1_Numida_meleagris':0.024178)[&TBE=0.66]:0.01732)[&TBE=0.875]:0.012023,('PKU35247.1_Limosa_lapponica_baueri':0.032162,('XP_021387927.1_Lonchura_striata_domestica':0.153867,('XP_005532318.1_Pseudopodoces_humilis':0.019752,'XP_014744847.1_Sturnus_vulgaris':0.029009)[&TBE=0.71]:0.018734)[&TBE=0.975]:0.081378)[&TBE=0.953333]:0.031894)[&TBE=0.991667]:0.155731)[&TBE=0.92]:0.09917)[&TBE=0.985]:0.208499)[&TBE=0.9655]:0.151465)[&TBE=0.969048]:0.178166,('XP_006641856.1_Lepisosteus_oculatus':0.291456,('XP_018620259.1_Scleropages_formosus':0.527975,(('XP_012673610.1_Clupea_harengus':0.578318,(('XP_022542498.1_Astyanax_mexicanus':0.205455,'XP_017540596.1_Pygocentrus_nattereri':0.386197)[&TBE=0.99]:0.291681,('XP_012684996.1_Clupea_harengus':0.545257,('NP_571674.1_Danio_rerio':0.217119,(('XP_016345360.1_Sinocyclocheilus_anshuiensis':0.037271,'XP_016113438.1_Sinocyclocheilus_grahami':0.040928)[&TBE=0.93]:0.054085,('XP_018922163.1_Cyprinus_carpio':0.137677,('XP_016359517.1_Sinocyclocheilus_anshuiensis':0.039567,'XP_016413222.1_Sinocyclocheilus_rhinocerous':0.050347)[&TBE=1.0]:0.037874)[&TBE=0.76]:0.033216)[&TBE=0.9225]:0.068858)[&TBE=1.0]:0.2101)[&TBE=0.96]:0.103954)[&TBE=0.87875]:0.064913)[&TBE=0.837778]:0.068968,((('XP_017328389.1_Ictalurus_punctatus':0.350985,('XP_017577191.1_Pygocentrus_nattereri':0.180921,'XP_015461408.2_Astyanax_mexicanus':0.166891)[&TBE=0.68]:0.095889)[&TBE=0.615]:0.043635,('XP_018974847.1_Cyprinus_carpio':0.035513,(('XP_016309053.1_Sinocyclocheilus_anshuiensis':0.040555,'XP_018942348.1_Cyprinus_carpio':0.060181)[&TBE=0.97]:0.068766,('XP_016343500.1_Sinocyclocheilus_anshuiensis':0.046166,'NP_919375.2_Danio_rerio':0.179261)[&TBE=0.47]:0.014951)[&TBE=0.746667]:0.012754)[&TBE=0.985]:0.277994)[&TBE=0.968571]:0.222283,('XP_010903871.1_Esox_lucius':0.172008,((('XP_014017918.1_Salmo_salar':0.068012,'XP_021449584.1_Oncorhynchus_mykiss':0.049318)[&TBE=0.9]:0.042505,('NP_001117034.1_Salmo_salar':0.043406,('XP_021414779.1_Oncorhynchus_mykiss':0.027918,'XP_020353659.1_Oncorhynchus_kisutch':0.077614)[&TBE=0.87]:0.033034)[&TBE=0.915]:0.048728)[&TBE=0.965]:0.083479,('XP_020509656.1_Labrus_bergylta':0.108147,('XP_003450317.1_Oreochromis_niloticus':0.239235,((('XP_010768816.1_Notothenia_coriiceps':0.136227,('XP_013873162.1_Austrofundulus_limnaeus':0.253195,'XP_017284035.1_Kryptolebias_marmoratus':0.197574)[&TBE=0.75]:0.071938)[&TBE=0.635]:0.035074,('XP_015230033.1_Cyprinodon_variegatus':0.106126,('XP_012732889.2_Fundulus_heteroclitus':0.18892,('XP_005814115.1_Xiphophorus_maculatus':0.116905,('XP_008429101.1_Poecilia_reticulata':0.032977,('XP_014846822.1_Poecilia_mexicana':0.018345,'XP_014890668.1_Poecilia_latipinna':0.038685)[&TBE=0.94]:0.042373)[&TBE=0.79]:0.038597)[&TBE=0.9]:0.064583)[&TBE=0.885]:0.061408)[&TBE=0.924]:0.094336)[&TBE=0.68625]:0.0115,((('XP_018531609.1_Lates_calcarifer':0.091989,'XP_022601850.1_Seriola_dumerili':0.164834)[&TBE=0.52]:0.021422,('XP_020471224.1_Monopterus_albus':0.181707,('XP_019719281.1_Hippocampus_comes':0.348891,('XP_008322040.1_Cynoglossus_semilaevis':0.251604,'XP_019948948.1_Paralichthys_olivaceus':0.087272)[&TBE=0.4]:0.040953)[&TBE=0.285]:5.73E-4)[&TBE=0.256667]:0.011705)[&TBE=0.394]:0.01879,(('XP_023130658.1_Amphiprion_ocellaris':0.058233,'XP_008295832.1_Stegastes_partitus':0.036565)[&TBE=0.78]:0.047783,('XP_010735438.1_Larimichthys_crocea':0.196095,(('XP_003965868.2_Takifugu_rubripes':0.308291,'XP_020783235.1_Boleophthalmus_pectinirostris':0.193749)[&TBE=0.15]:0.018006,('XP_020326297.1_Oncorhynchus_kisutch':0.074052,'XP_014044193.1_Salmo_salar':0.032428)[&TBE=1.0]:0.439575)[&TBE=0.45]:0.024236)[&TBE=0.4525]:0.040194)[&TBE=0.345]:0.016534)[&TBE=0.441667]:0.013152)[&TBE=0.644762]:0.0219)[&TBE=0.662727]:0.044131)[&TBE=0.663913]:0.108245)[&TBE=0.599286]:0.013442)[&TBE=0.614483]:0.157507)[&TBE=0.752703]:0.07252)[&TBE=0.954681]:1.0E-6)[&TBE=0.975625]:0.17724)[&TBE=0.990408]:0.540591)[&TBE=0.987042]:0.248339)[&TBE=0.992703]:0.13406)[&TBE=0.998158]:0.338376)[&TBE=0.794455]:0.064281)[&TBE=0.858193]:0.236859)[&TBE=0.860471]:0.366852)[&TBE=0.850814]:1.0E-6)[&TBE=0.786632]:0.064498)[&TBE=0.792922]:0.180382)[&TBE=0.80836]:1.0E-6)[&TBE=0.810518]:0.389123)[&TBE=0.755471]:1.0E-6,(((x10647922_Euplokamis_dunlapae:1.055612,(x12915366_Bolinopsis_ashleyi:0.119918,ML10941a_Mnemiopsis_leidyi:0.067288)[&TBE=0.52]:0.140376)[&TBE=0.935]:0.12933,((x12122637_Beroe_abyssicola:0.061834,x12881667_Beroe_sp_pink:0.180687)[&TBE=0.59]:0.091789,(x286268_Dryodora_glandiformis:0.357052,(x12229543_Bolinopsis_infundibulum:0.236024,(x13057276_Pukia_falcata:0.275836,(x13201199_Euplokamis_sp:1.0E-6,x12706152_P_bachei_pileus:0.074358)[&TBE=0.89]:0.385474)[&TBE=0.69]:0.45916)[&TBE=0.566667]:0.075804)[&TBE=0.6]:0.159512)[&TBE=0.62]:0.263831)[&TBE=0.99]:2.324468,(((x245329_Nematostella_vectensis:2.864798,((x229779_Hydra_magnapapillata:1.220974,(x37807_Nematostella_vectensis:0.302669,('XP_015756010.1_Acropora_digitifera':0.10171,('XP_022783838.1_Stylophora_pistillata':0.131537,(CL6277_Montastrea_faveolata:0.009397,'XP_020604088.1_Orbicella_faveolata':1.0E-6)[&TBE=1.0]:0.024024)[&TBE=0.92]:0.109415)[&TBE=0.893333]:0.134068)[&TBE=0.9975]:0.70119)[&TBE=0.918]:0.194965,((x225322_Hydra_magnapapillata:1.22633,(x001784_Clytia_hemisphaerica:0.448033,x221030_Hydra_magnapapillata:0.962399)[&TBE=1.0]:1.004008)[&TBE=0.745]:0.515584,((x114394_Nematostella_vectensis:0.490883,(x14084_Acropora_digitifera:0.08438,GE908154_Porites_astreoides:0.146978)[&TBE=0.87]:0.304101)[&TBE=0.95]:0.493931,(('XP_001622902.1_Nematostella_vectensis':0.224307,'XP_020910715.1_Exaiptasia_pallida':0.214084)[&TBE=1.0]:0.29142,('XP_015765969.1_Acropora_digitifera':0.299746,('XP_022803149.1_Stylophora_pistillata':0.171425,'XP_020627320.1_Orbicella_faveolata':0.027938)[&TBE=0.64]:0.100925)[&TBE=0.635]:0.15832)[&TBE=0.99]:0.626066)[&TBE=0.765714]:0.203208)[&TBE=0.612]:0.068367)[&TBE=0.769375]:0.164695)[&TBE=0.724118]:1.0E-6,((('XP_003730785.2_Strongylocentrotus_purpuratus':0.627076,'XP_022093435.1_Acanthaster_planci':0.507782)[&TBE=0.92]:0.492084,(('XP_019634801.1_Branchiostoma_belcheri':1.0E-6,'XP_002593407.1_Branchiostoma_floridae':0.183293)[&TBE=1.0]:0.547196,(((TRINITY_DN1593_c0_g2_i1_Salpa_fusiformis:0.796727,'XP_002129296.1_Ciona_intestinalis':0.261966)[&TBE=1.0]:0.610972,(('XP_002120303.1_Ciona_intestinalis':0.14939,'ENSCSAVT00000012415.1_Ciona_savignyi':0.20748)[&TBE=1.0]:0.542411,(c3106_g1_i1_Molgula_manhattensis:0.449525,(CJ416978_Molgula_tectiformis:0.432193,CJ401256_Molgula_tectiformis:0.32796)[&TBE=0.87]:0.189797)[&TBE=0.74]:0.189601)[&TBE=0.99]:0.464894)[&TBE=0.925]:0.362227,((Eb_CT016427_b2:0.821601,(JL6271_Lethenteron_japonicum:0.01913,PMZ_0045611_RA_Petromyzon_marinus:1.0E-6)[&TBE=1.0]:0.236182)[&TBE=0.98]:0.262541,(('NP_001279536.1_Callorhinchus_milii':0.022445,('XP_020377648.1_Rhincodon_typus':0.074453,SmallerSpottedCatshark_TranscriptomeContig18163:0.03568)[&TBE=0.58]:0.0209)[&TBE=0.76]:0.008424,((('XP_021460505.1_Oncorhynchus_mykiss':0.019088,(('XP_005165978.1_Danio_rerio':0.071036,'XP_012680754.1_Clupea_harengus':0.037007)[&TBE=0.14]:0.008366,('CAF90551.1_Tetraodon_nigroviridis':0.072895,('XP_012716615.1_Fundulus_heteroclitus':0.045358,'XP_014328910.1_Xiphophorus_maculatus':0.008555)[&TBE=0.98]:0.065517)[&TBE=0.68]:0.025087)[&TBE=0.655]:0.008885)[&TBE=0.738]:0.080836,(('XP_014045383.1_Salmo_salar':0.04426,'XP_021468556.1_Oncorhynchus_mykiss':0.017165)[&TBE=1.0]:0.082287,('XP_022059078.1_Acanthochromis_polyacanthus':1.0E-6,('XP_004542727.1_Maylandia_zebra':0.045098,('XP_022624470.1_Seriola_dumerili':1.0E-6,('XP_020778972.1_Boleophthalmus_pectinirostris':0.097051,'XP_019959764.1_Paralichthys_olivaceus':0.08394)[&TBE=0.58]:0.039912)[&TBE=0.625]:0.018034)[&TBE=0.703333]:0.00871)[&TBE=0.9625]:0.126158)[&TBE=0.958333]:0.124397)[&TBE=0.7075]:0.057268,('XP_006005319.1_Latimeria_chalumnae':0.1426,((('ACO51885.1_Rana_catesbeiana':0.069414,'XP_018418989.1_Nanorana_parkeri':0.002462)[&TBE=0.96]:0.063886,('XP_018119349.1_Xenopus_laevis':0.018252,'XP_002936655.1_Xenopus_tropicalis':0.017168)[&TBE=0.88]:0.044236)[&TBE=0.96]:0.151968,((('NP_990037.1_Gallus_gallus':0.008489,('XP_005425117.1_Geospiza_fortis':0.034888,'XP_021134000.1_Anas_platyrhynchos':0.018539)[&TBE=0.46]:1.0E-6)[&TBE=0.575]:0.010432,(('XP_007067441.1_Chelonia_mydas':0.008654,'XP_005295824.1_Chrysemys_picta_bellii':0.008801)[&TBE=0.96]:0.03444,('XP_006267096.1_Alligator_mississippiensis':0.010689,('XP_007440510.1_Python_bivittatus':0.019558,'XP_015271553.1_Gekko_japonicus':0.032735)[&TBE=0.49]:0.026151)[&TBE=0.62]:0.016339)[&TBE=0.52]:0.016201)[&TBE=0.555714]:0.024185,('XP_007667294.1_Ornithorhynchus_anatinus':0.010315,('XP_020844671.1_Phascolarctos_cinereus':0.020469,('XP_007502478.1_Monodelphis_domestica':0.035355,('XP_004701757.1_Echinops_telfairi':0.049064,('XP_006902985.1_Elephantulus_edwardii':0.035709,(('XP_022353675.1_Enhydra_lutris_kenyoni':0.04596,'NP_001092338.1_Bos_taurus':0.018093)[&TBE=0.33]:0.009739,('XP_007939575.1_Orycteropus_afer_afer':0.009901,(Homo_sapiens_BOK:1.0E-6,'XP_021054314.1_Mus_pahari':0.036427)[&TBE=0.94]:0.054024)[&TBE=0.615]:0.009195)[&TBE=0.6225]:1.0E-6)[&TBE=0.868]:0.016129)[&TBE=1.0]:0.170571)[&TBE=0.93]:0.019918)[&TBE=0.90125]:0.030571)[&TBE=0.844444]:0.027322)[&TBE=0.847647]:0.051573)[&TBE=0.856667]:1.0E-6)[&TBE=0.875909]:0.036682)[&TBE=0.898286]:0.068531)[&TBE=0.964737]:0.198808)[&TBE=0.99878]:0.5034)[&TBE=0.859792]:0.044671)[&TBE=0.8282]:0.007769)[&TBE=0.812308]:0.042021,(('XP_013401246.1_Lingula_anatina':0.507914,('XP_009050370.1_Lottia_gigantea':0.833442,('XP_012935794.1_Aplysia_californica':0.23407,'XP_013069706.1_Biomphalaria_glabrata':0.304487)[&TBE=1.0]:0.615382)[&TBE=0.94]:0.533118)[&TBE=0.76]:0.244323,((('XP_003741434.1_Galendromus_occidentalis':0.023919,'XP_022661414.1_Varroa_destructor':0.080887)[&TBE=0.9]:0.404992,('KFM81480.1_Stegodyphus_mimosarum':0.299942,('XP_015929024.1_Parasteatoda_tepidariorum':0.3246,('XP_023238696.1_Centruroides_sculpturatus':0.583725,('XP_013785930.1_Limulus_polyphemus':0.203065,('XP_013787501.1_Limulus_polyphemus':0.077703,('XP_013772602.2_Limulus_polyphemus':0.087973,'XP_013780070.1_Limulus_polyphemus':0.192774)[&TBE=0.75]:0.094455)[&TBE=0.965]:0.139993)[&TBE=1.0]:0.268222)[&TBE=0.975]:0.16064)[&TBE=0.818]:0.046846)[&TBE=0.861667]:0.07966)[&TBE=0.96625]:0.314103,(('XP_018013822.1_Hyalella_azteca':0.459298,'CDI59404.1_Macrobrachium_rosenbergii':0.239555)[&TBE=0.97]:0.356891,(('XP_023338781.1_Eurytemora_affinis':0.600881,'ACO11568.1_Caligus_rogercresseyi':0.14256)[&TBE=0.92]:0.165292,('XP_021914180.1_Zootermopsis_nevadensis':0.158985,(((('XP_022907583.1_Onthophagus_taurus':0.198491,'XP_018321963.1_Agrilus_planipennis':0.342114)[&TBE=0.43]:0.054276,('XP_017769675.1_Nicrophorus_vespilloides':0.29449,('EFA03725.2_Tribolium_castaneum':0.186582,('XP_019873972.1_Aethina_tumida':0.173208,('ERL93168.1_Dendroctonus_ponderosae':0.224991,'XP_018564680.1_Anoplophora_glabripennis':0.329921)[&TBE=0.64]:0.077027)[&TBE=0.97]:0.160543)[&TBE=1.0]:0.383998)[&TBE=0.8425]:0.082836)[&TBE=0.91]:0.194741,('XP_002432416.1_Pediculus_humanus_corporis':0.422595,('XP_008556892.1_Microplitis_demolitor':0.222691,((('XP_015121586.1_Diachasma_alloeum':0.039528,'XP_011309370.1_Fopius_arisanus':0.117403)[&TBE=0.99]:0.169504,('XP_001604280.2_Nasonia_vitripennis':0.32877,('XP_011502886.1_Ceratosolen_solmsi_marchali':0.180207,'XP_014204471.1_Copidosoma_floridanum':0.277974)[&TBE=0.73]:0.042008)[&TBE=0.91]:0.11999)[&TBE=0.6375]:0.005011,((('XP_012280205.1_Orussus_abietinus':0.160233,'XP_015608314.1_Cephus_cinctus':0.087558)[&TBE=0.63]:0.042513,('XP_015522411.1_Neodiprion_lecontei':0.046545,'XP_012262750.1_Athalia_rosae':0.017425)[&TBE=0.8]:0.086078)[&TBE=0.656667]:0.0368,('XP_003707726.2_Megachile_rotundata':0.009989,('XP_015434278.1_Dufourea_novaeangliae':0.073746,(('XP_012350504.1_Apis_florea':0.077224,'XP_017755955.1_Eufriesea_mexicana':0.021006)[&TBE=0.84]:0.006822,('XP_012174553.1_Bombus_terrestris':0.018382,'XP_017875270.1_Ceratina_calcarata':0.12028)[&TBE=0.54]:0.016847)[&TBE=0.75]:0.034889)[&TBE=0.8075]:0.009232)[&TBE=0.956]:0.115011)[&TBE=0.72]:0.032622)[&TBE=0.954286]:0.12878)[&TBE=1.0]:0.429652)[&TBE=0.946875]:0.089021)[&TBE=0.803478]:0.061692,(('XP_014248026.1_Cimex_lectularius':0.487324,('XP_022184369.1_Nilaparvata_lugens':0.312553,'XP_008480434.1_Diaphorina_citri':0.363808)[&TBE=0.44]:0.089699)[&TBE=0.425]:0.06567,((('EAT47374.1_Aedes_aegypti':1.0E-6,('ETN66716.1_Anopheles_darlingi':0.026511,'XP_001843870.1_Culex_quinquefasciatus':0.017957)[&TBE=0.83]:0.04553)[&TBE=1.0]:0.137673,(('XP_023296997.1_Lucilia_cuprina':1.0E-6,('XP_005186112.1_Musca_domestica':0.034568,'XP_013102825.1_Stomoxys_calcitrans':1.0E-6)[&TBE=0.9]:0.052378)[&TBE=0.845]:0.045628,(('NP_523702.1_Drosophila_melanogaster':0.032415,'XP_002026046.1_Drosophila_persimilis':0.012159)[&TBE=0.94]:0.088229,('XP_004517407.1_Ceratitis_capitata':0.008954,('XP_011197933.1_Bactrocera_dorsalis':0.016769,'XP_011184233.1_Zeugodacus_cucurbitae':0.043595)[&TBE=0.78]:0.01055)[&TBE=0.995]:0.140249)[&TBE=0.8325]:0.069241)[&TBE=1.0]:0.274713)[&TBE=0.949]:0.069165,((('KFB44081.1_Anopheles_sinensis':0.030934,'BAV03492.1_Anopheles_stephensi':0.034158)[&TBE=0.7]:0.037989,('XP_001843869.1_Culex_quinquefasciatus':0.095131,('XP_001659566.1_Aedes_aegypti':0.009742,'XP_019551266.1_Aedes_albopictus':0.017286)[&TBE=0.86]:0.038942)[&TBE=0.93]:0.078207)[&TBE=0.9775]:0.244456,(('XP_023296995.1_Lucilia_cuprina':0.035015,('XP_005186111.2_Musca_domestica':0.028545,'XP_013102828.1_Stomoxys_calcitrans':0.015582)[&TBE=0.89]:0.054332)[&TBE=0.935]:0.075569,('XP_020712791.1_Ceratitis_capitata':0.035431,('XP_001961317.2_Drosophila_ananassae':0.010141,('XP_002049521.2_Drosophila_virilis':0.026734,'XP_001970756.1_Drosophila_erecta':0.04541)[&TBE=0.5]:0.016511)[&TBE=0.82]:0.079822)[&TBE=0.756667]:0.058686)[&TBE=1.0]:0.260339)[&TBE=0.997273]:0.225693)[&TBE=0.991364]:0.378392)[&TBE=0.9012]:0.053111)[&TBE=0.967755]:0.087722)[&TBE=0.9808]:0.224674)[&TBE=0.973077]:0.047432)[&TBE=0.976667]:0.184428)[&TBE=0.983651]:0.403209)[&TBE=0.942985]:1.0E-6)[&TBE=0.974167]:0.268575)[&TBE=0.988478]:0.633416,((((Corticium_candelabrum_19313:0.903605,x6559_Oscarella_sp:0.646936)[&TBE=0.69]:0.431467,(Chondrilla_nucula_11840:2.179736,(Ircinia_fasciculata_4707_:1.257275,((x3492_Stylissa_carteri:0.899442,('AM040445.1_Lubomirskia_baikalensis':0.408714,'m.9608_Ephydatia_muelleri':0.069986)[&TBE=0.92]:0.349824)[&TBE=0.665]:0.044198,((CL1419_Amphimedon_queenslandica:0.266261,'XM_003383340.3_Amphimedon_queenslandica':1.0E-6)[&TBE=0.99]:1.843258,(x9575_Stylissa_carteri:1.262745,(c50359_Haliclona_tubifera:0.61513,('XM_003383377.3_Amphimedon_queenslandica':0.447424,c35057_Haliclona_amboinensis:0.235745)[&TBE=0.67]:0.120384)[&TBE=0.625]:0.152048)[&TBE=0.653333]:0.100945)[&TBE=0.71]:0.218929)[&TBE=0.9675]:0.654172)[&TBE=0.94]:0.331549)[&TBE=0.914]:0.271574)[&TBE=0.791667]:0.218548,('ANR94962.1_Trichoplax_adhaerens':0.723344,(((x223227_Hydra_magnapapillata:1.495522,x223228_Hydra_magnapapillata:0.421949)[&TBE=0.59]:0.248758,('XP_020902779.1_Exaiptasia_pallida':0.175702,('XP_001641955.1_Nematostella_vectensis':0.099908,('XP_022786553.1_Stylophora_pistillata':0.047098,('XP_020601942.1_Orbicella_faveolata':0.023379,'XP_015757242.1_Acropora_digitifera':0.08344)[&TBE=0.46]:0.019982)[&TBE=0.775]:0.122749)[&TBE=0.713333]:0.057907)[&TBE=0.9025]:0.163515)[&TBE=0.846667]:0.197273,((x185890_5_Bugula_neritina:0.888151,(('ELU09359.1_Capitella_teleta':0.163132,'XP_009018195.1_Helobdella_robusta':0.469636)[&TBE=0.82]:0.25721,(('XP_011439700.1_Crassostrea_gigas':0.330135,'OWF49771.1_Mizuhopecten_yessoensis':0.089266)[&TBE=0.9]:0.253002,('XP_009064284.1_Lottia_gigantea':0.305882,('XP_005102292.2_Aplysia_californica':0.306498,('XP_013070172.1_Biomphalaria_glabrata':0.02079,ES750616_Biomphalaria_glabrata:0.047093)[&TBE=0.9]:0.20533)[&TBE=0.87]:0.29604)[&TBE=0.833333]:0.11403)[&TBE=0.686]:0.118892)[&TBE=0.511429]:0.09015)[&TBE=0.4475]:1.0E-6,(('XP_022105980.1_Acanthaster_planci':0.269186,'XP_793197.1_Strongylocentrotus_purpuratus':0.437346)[&TBE=0.49]:0.206916,(('XP_002589440.1_Branchiostoma_floridae':0.047898,'XP_019646409.1_Branchiostoma_belcheri':1.0E-6)[&TBE=0.7]:0.333926,(('XP_007892341.1_Callorhinchus_milii':0.029661,'XP_020366594.1_Rhincodon_typus':0.085143)[&TBE=1.0]:0.212351,(('XP_006628669.1_Lepisosteus_oculatus':0.138266,'XP_005995522.1_Latimeria_chalumnae':0.282441)[&TBE=0.77]:0.102691,((('XP_007483748.1_Monodelphis_domestica':0.04765,('XP_003769014.1_Sarcophilus_harrisii':0.145218,'XP_020855297.1_Phascolarctos_cinereus':0.059954)[&TBE=0.7]:0.017791)[&TBE=0.825]:0.04798,('XP_005878084.1_Myotis_brandtii':0.051477,('XP_014701786.1_Equus_asinus':0.066628,('NP_001018644.1_Canis_lupus_familiaris':0.038811,(Homo_sapiens_BAK:0.03648,'XP_006860617.1_Chrysochloris_asiatica':0.049229)[&TBE=0.45]:0.028717)[&TBE=0.535]:1.0E-6)[&TBE=0.543333]:0.010812)[&TBE=0.685]:0.051269)[&TBE=0.908571]:0.157088,((('XP_005026887.2_Anas_platyrhynchos':0.040695,'NP_001026091.1_Gallus_gallus':0.055775)[&TBE=0.7]:0.022325,('XP_005239783.1_Falco_peregrinus':0.062023,('XP_014809227.1_Calidris_pugnax':0.039496,('XP_009869395.1_Apaloderma_vittatum':0.094705,'OPJ88891.1_Patagioenas_fasciata_monilis':0.146426)[&TBE=0.31]:0.017514)[&TBE=0.42]:0.01237)[&TBE=0.463333]:0.010253)[&TBE=0.696]:0.036958,((('XP_019402245.1_Crocodylus_porosus':0.018354,'XP_006270155.2_Alligator_mississippiensis':0.019033)[&TBE=0.58]:0.026212,('EMP32352.1_Chelonia_mydas':0.048019,'XP_006119412.1_Pelodiscus_sinensis':0.037648)[&TBE=0.44]:0.020538)[&TBE=0.403333]:0.022769,('XP_003220444.1_Anolis_carolinensis':0.018258,(('XP_020651493.1_Pogona_vitticeps':0.140915,'XP_015275229.1_Gekko_japonicus':0.115451)[&TBE=0.27]:0.02537,('XP_013912039.1_Thamnophis_sirtalis':0.043234,'XP_007443511.1_Python_bivittatus':0.023076)[&TBE=0.75]:0.047614)[&TBE=0.583333]:0.027414)[&TBE=0.7275]:0.078645)[&TBE=0.60875]:0.026197)[&TBE=0.654286]:0.12322)[&TBE=0.819091]:0.106847)[&TBE=0.886667]:1.0E-6)[&TBE=0.968462]:0.867355)[&TBE=0.899286]:1.0E-6)[&TBE=0.842333]:0.077167)[&TBE=0.725385]:0.102099)[&TBE=0.824783]:1.0E-6)[&TBE=0.842128]:0.505656)[&TBE=0.849333]:0.305814,((('XM_020005026.1_Amphimedon_queenslandica':2.304496,c44061_Haliclona_tubifera:1.867322)[&TBE=0.32]:1.551756,((Corticium_candelabrum_10268:1.001135,x8518_Oscarella_sp:1.175809)[&TBE=0.78]:0.88074,((Corticium_candelabrum_69341:1.09343,(Corticium_candelabrum_54098:0.275448,x8818_Oscarella_sp:0.41363)[&TBE=0.79]:0.178057)[&TBE=0.935]:0.460934,((l75198_Leucosolenia_complicata:0.339135,x65363_Sycon_ciliatum:0.375195)[&TBE=1.0]:0.818187,(x11202_Oscarella_sp:0.65908,Corticium_candelabrum_24588_:2.021563)[&TBE=0.56]:0.709144)[&TBE=0.416667]:0.265183)[&TBE=0.55]:0.160698)[&TBE=0.575]:0.250163)[&TBE=0.465]:1.0E-6,(('XP_002158069.3_Hydra_vulgaris':0.551093,((x100129_Nematostella_vectensis:0.231922,'KXJ10701.1_Exaiptasia_pallida':0.26093)[&TBE=0.78]:0.107052,('XP_015767434.1_Acropora_digitifera':0.121326,('XP_020620765.1_Orbicella_faveolata':0.111932,'PFX28631.1_Stylophora_pistillata':0.091054)[&TBE=0.79]:0.077184)[&TBE=0.9]:0.131869)[&TBE=0.94]:0.398944)[&TBE=0.842]:0.207264,((x210627_6_Bugula_neritina:0.391271,('XP_013403489.1_Lingula_anatina':0.478193,('ELU02334.1_Capitella_teleta':0.331224,(('XP_021371377.1_Mizuhopecten_yessoensis':0.123612,('AGK88247.1_Mytilus_galloprovincialis':0.081555,'XP_022291798.1_Crassostrea_virginica':0.257097)[&TBE=0.76]:0.072453)[&TBE=0.96]:0.184673,('XP_014771066.1_Octopus_bimaculoides':0.399151,('XP_009053780.1_Lottia_gigantea':0.487981,('XP_005104447.1_Aplysia_californica':0.129597,'XP_013085524.1_Biomphalaria_glabrata':0.098642)[&TBE=0.95]:0.235982)[&TBE=0.685]:0.073116)[&TBE=0.566667]:0.038706)[&TBE=0.663333]:0.152573)[&TBE=0.648571]:0.107367)[&TBE=0.5975]:0.116329)[&TBE=0.56]:1.0E-6,(('XP_006822173.1_Saccoglossus_kowalevskii':0.353636,('XP_022082473.1_Acanthaster_planci':0.308118,('PIK54204.1_Apostichopus_japonicus':0.353995,'XP_011667030.1_Strongylocentrotus_purpuratus':0.181369)[&TBE=0.52]:0.058546)[&TBE=1.0]:0.274396)[&TBE=0.996667]:0.438764,((('AMY56534.1_Botryllus_schlosseri':0.427052,(c823_g1_i1_Distomus_variolosus:0.21397,c6345_g1_i1_Bostrichobranchus_pilularis:0.914981)[&TBE=0.48]:0.120106)[&TBE=0.855]:0.246403,(TRINITY_DN26471_c1_g3_i1_Doliolum_nationalis:0.310084,(TRINITY_DN13769_c2_g1_i3_Salpa_fusiformis:0.748747,'XP_002123003.1_Ciona_intestinalis':0.211375)[&TBE=0.75]:0.121039)[&TBE=0.87]:0.153696)[&TBE=0.972]:0.341947,(('XP_020374381.1_Rhincodon_typus':0.557796,'XP_007885915.1_Callorhinchus_milii':0.193143)[&TBE=1.0]:0.651034,((('XP_013981944.1_Salmo_salar':0.346108,(x140501185_C768971_Erpetoichthys_calabaricus_53:0.680899,(WHYR150101426190_Atractosteus_spatula_11595_0_25:0.03841,'XP_006642717.1_Lepisosteus_oculatus':0.078252)[&TBE=0.81]:0.143051)[&TBE=0.735]:0.204133)[&TBE=0.993333]:0.537215,('XP_018590455.1_Scleropages_formosus':0.280092,((RSZYR1312057152644_Polyodon_spathula_112822_0_11:0.286375,WHYR1501014421415_Lepisosteus_platyrhincus:0.054445)[&TBE=0.94]:0.123775,(('XP_008414120.1_Poecilia_reticulata':0.120641,('AGU38820.1_Sparus_aurata':0.051954,('XP_003964831.1_Takifugu_rubripes':0.123914,('XP_023269630.1_Seriola_lalandi_dorsalis':0.074317,'XP_020508149.1_Labrus_bergylta':0.051785)[&TBE=0.85]:0.054088)[&TBE=0.69]:0.02402)[&TBE=0.713333]:0.030638)[&TBE=0.6875]:0.03911,(('ALM23382.1_Clarias_batrachus':0.050067,'NP_001187866.1_Ictalurus_punctatus':0.068754)[&TBE=0.91]:0.060404,('XP_012681135.1_Clupea_harengus':0.142518,('XP_017553035.1_Pygocentrus_nattereri':0.053393,'XP_022528737.1_Astyanax_mexicanus':0.064875)[&TBE=0.98]:0.063179)[&TBE=0.8]:0.04154)[&TBE=0.7325]:1.0E-6)[&TBE=0.828889]:0.063274)[&TBE=0.888182]:0.056249)[&TBE=0.9625]:0.294775)[&TBE=0.721875]:1.0E-6,(('XP_005996773.1_Latimeria_chalumnae':0.472241,'XP_005996278.1_Latimeria_chalumnae':0.782132)[&TBE=0.0]:1.0E-6,(('XP_018081845.1_Xenopus_laevis':0.059991,'NP_989185.1_Xenopus_tropicalis':0.05155)[&TBE=0.92]:0.178638,('XP_018422941.1_Nanorana_parkeri':0.047493,((('XP_014118033.1_Pseudopodoces_humilis':1.0E-6,'XP_014749353.1_Sturnus_vulgaris':0.039368)[&TBE=1.0]:0.151307,('XP_014452667.2_Alligator_mississippiensis':0.097863,('XP_005285787.1_Chrysemys_picta_bellii':0.123467,('XP_015274021.1_Gekko_japonicus':0.073183,(('XP_020648432.1_Pogona_vitticeps':0.03057,'XP_003226241.1_Anolis_carolinensis':0.059041)[&TBE=0.87]:0.033481,('XP_015665723.1_Protobothrops_mucrosquamatus':0.064444,'XP_007435463.1_Python_bivittatus':0.021727)[&TBE=1.0]:0.082001)[&TBE=0.946667]:0.021213)[&TBE=0.9875]:0.105381)[&TBE=0.84]:0.015816)[&TBE=0.731667]:0.040756)[&TBE=0.77]:0.07544,('XP_016061578.1_Miniopterus_natalensis':0.034286,('XP_006898744.1_Elephantulus_edwardii':0.058581,('XP_007492742.1_Monodelphis_domestica':0.094097,('NP_001003011.1_Canis_lupus_familiaris':1.0E-6,('XP_004646527.1_Octodon_degus':0.029868,('NP_620116.1_Homo_sapiens_BAX':1.0E-6,('XP_008052324.1_Carlito_syrichta':0.018665,('NP_031553.1_Mus_musculus':0.010409,'XP_021512320.1_Meriones_unguiculatus':0.049245)[&TBE=0.88]:0.041138)[&TBE=0.64]:0.011248)[&TBE=0.616667]:0.009888)[&TBE=0.6075]:1.0E-6)[&TBE=0.758]:1.0E-6)[&TBE=0.803333]:0.017225)[&TBE=0.855714]:0.012483)[&TBE=0.97625]:0.217286)[&TBE=0.927647]:0.169094)[&TBE=0.906667]:0.10865)[&TBE=0.904]:0.237245)[&TBE=0.842273]:0.043295)[&TBE=0.927179]:0.076546)[&TBE=0.970244]:0.505387)[&TBE=0.904255]:0.090442)[&TBE=0.875686]:0.145237)[&TBE=0.953443]:0.457428)[&TBE=0.911791]:0.110342)[&TBE=0.883718]:0.26419)[&TBE=0.854676]:0.358598)[&TBE=0.755252]:1.0E-6)[&TBE=0.775]:0.263952)[&TBE=0.675]:1.0E-6)[&TBE=0.361379]:0.113178)[&TBE=0.386667]:0.05377)[&TBE=0.322]:0.124544)[&TBE=0.38875]:0.066843)[&TBE=0.976667]:1.197828)[&TBE=0.74]:0.085098);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="Adobe Arabic";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set colour.scheme.tbe="TBE:InterpolatingContinuous{{false,false,0.0,0.0},#-2536895,#-2543570}";
+	set layout.expansion=624;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="TBE";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="TBE";
+	set nodeLabels.displayAttribute="TBE";
+	set nodeLabels.fontName="Adobe Arabic";
+	set nodeLabels.fontSize=14;
+	set nodeLabels.fontStyle=1;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="Adobe Arabic";
+	set tipLabels.fontSize=19;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+
