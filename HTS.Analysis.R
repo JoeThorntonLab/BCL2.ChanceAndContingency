@@ -15,6 +15,7 @@ library(ggpubr)
 library(insect)
 library(rgexf)
 library(igraph)
+library(multcomp)
 
 setwd("")
 
@@ -209,7 +210,7 @@ for(i in I) {
 }
 
 #Amino acid mutant Freqs for specific comparison
-MCL1.TS <- 45:60
+MCL1.TS <- 41:60
 BCL2.TS <- 1:20
 MCL1.BB <- c(33:36,39:40,57:60,61:64)
 BCL2.BB <- c(17:20,25:28,29:32)
@@ -488,6 +489,210 @@ ggplot(DNA.SITES, aes(SITE:DNA,EXP)) + coord_fixed(ratio=1) + geom_tile(aes(fill
   scale_fill_gradientn(colors=c("#FFFFFF","#00FF66","#228B22","#006400"),limits=c(0,1)) +
   theme(panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
+##Define set of sites and replicates used for main analyses
+COMPARABLE.SITES <- c(1:6,64:96,148:198,200:269)
+COMPARABLE.REPS  <- c(17:20,25:28,29:31,33:36,57:60,61:64)
+
+
+##Overlap counting of states in independent evolution trajectories. 
+#Count overlap by pairs of replicates
+J <- J[J %in% COMPARABLE.REPS]
+I <- J
+OVERLAP.COUNT.REPLICATE <- matrix(0,nrow=length(I),ncol=length(J))
+colnames(OVERLAP.COUNT.REPLICATE) <- J
+rownames(OVERLAP.COUNT.REPLICATE) <- I
+for(i in I) {
+  for(j in J) {
+    if(i <= j) {
+      #Get mutations in a pair of replicates
+      X <- AA.SITES[which(AA.SITES$EXP == i),]
+      Y <- AA.SITES[which(AA.SITES$EXP == j),]
+      Z <- merge(X,Y,by=c("SITE","AA"))
+      
+      #Count site 271?
+      #Z <- Z[Z$SITE != 271,]
+      
+      OVERLAP.COUNT.REPLICATE[which(I==i),which(J==j)] <- nrow(Z)
+    }
+  } 
+}
+for(i in I) {
+  for(j in J) {
+    if(i > j) {
+      OVERLAP.COUNT.REPLICATE[which(I==i),which(J==j)] <- OVERLAP.COUNT.REPLICATE[which(I==i),which(I==i)] + OVERLAP.COUNT.REPLICATE[which(J==j),which(J==j)] - OVERLAP.COUNT.REPLICATE[which(J==j),which(I==i)]
+    }
+  }
+}
+NUM.STATES.SINGLE.TOTAL.REPLICATE <- diag(OVERLAP.COUNT.REPLICATE)
+NUM.STATES.PAIR.TOTAL.REPLICATE   <- OVERLAP.COUNT.REPLICATE
+NUM.STATES.PAIR.TOTAL.REPLICATE[upper.tri(NUM.STATES.PAIR.TOTAL.REPLICATE,diag=TRUE)] <- 0  
+NUM.STATES.PAIR.OVERLAP.REPLICATE <- OVERLAP.COUNT.REPLICATE
+NUM.STATES.PAIR.OVERLAP.REPLICATE[lower.tri(NUM.STATES.PAIR.OVERLAP.REPLICATE,diag=TRUE)] <- 0  
+
+#Between any pair of replicates from a different starting genotype
+mean(c(
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[1:4,5:23])/NUM.STATES.PAIR.TOTAL.REPLICATE[5:23,1:4],
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[5:8,9:23])/NUM.STATES.PAIR.TOTAL.REPLICATE[9:23,5:8],
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[9:11,12:23])/NUM.STATES.PAIR.TOTAL.REPLICATE[12:23,9:11],
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[12:15,16:23])/NUM.STATES.PAIR.TOTAL.REPLICATE[16:23,12:15],
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[16:19,20:23])/NUM.STATES.PAIR.TOTAL.REPLICATE[20:23,16:19]))
+
+#Between any pair of replicates from a different starting genotype, but same starting phenotype
+mean(c(
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[1:4,5:11])/NUM.STATES.PAIR.TOTAL.REPLICATE[5:11,1:4],
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[5:8,9:11])/NUM.STATES.PAIR.TOTAL.REPLICATE[9:11,5:8],
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[12:15,16:23])/NUM.STATES.PAIR.TOTAL.REPLICATE[16:23,12:15],
+  t(NUM.STATES.PAIR.OVERLAP.REPLICATE[16:19,20:23])/NUM.STATES.PAIR.TOTAL.REPLICATE[20:23,16:19]))
+
+#Between replicates of AncB1 and HsMCL1 (most distant MCL1 like)
+mean(t(NUM.STATES.PAIR.OVERLAP.REPLICATE[16:19,20:23])/NUM.STATES.PAIR.TOTAL.REPLICATE[20:23,16:19])
+
+#Between replicates of AncB4 and HsBCL2 (most distant BCL2 like)
+mean(t(NUM.STATES.PAIR.OVERLAP.REPLICATE[1:4,5:8])/NUM.STATES.PAIR.TOTAL.REPLICATE[5:8,1:4])
+
+#Overlap among replicates from the same starting genotype
+mean(c(
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[1,2:4]/NUM.STATES.PAIR.TOTAL.REPLICATE[2:4,1],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[2,3:4]/NUM.STATES.PAIR.TOTAL.REPLICATE[3:4,2],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[3,4]/NUM.STATES.PAIR.TOTAL.REPLICATE[4,3],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[5,6:8]/NUM.STATES.PAIR.TOTAL.REPLICATE[6:8,5],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[6,7:8]/NUM.STATES.PAIR.TOTAL.REPLICATE[7:8,6],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[7,8]/NUM.STATES.PAIR.TOTAL.REPLICATE[8,7],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[9,10:11]/NUM.STATES.PAIR.TOTAL.REPLICATE[10:11,9],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[10,11]/NUM.STATES.PAIR.TOTAL.REPLICATE[11,10],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[12,13:15]/NUM.STATES.PAIR.TOTAL.REPLICATE[13:15,12],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[13,14:15]/NUM.STATES.PAIR.TOTAL.REPLICATE[14:15,13],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[14,15]/NUM.STATES.PAIR.TOTAL.REPLICATE[15,14],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[16,17:19]/NUM.STATES.PAIR.TOTAL.REPLICATE[17:19,16],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[17,18:19]/NUM.STATES.PAIR.TOTAL.REPLICATE[18:19,17],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[18,19]/NUM.STATES.PAIR.TOTAL.REPLICATE[19,18],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[20,21:23]/NUM.STATES.PAIR.TOTAL.REPLICATE[21:23,20],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[21,22:23]/NUM.STATES.PAIR.TOTAL.REPLICATE[22:23,21],
+  NUM.STATES.PAIR.OVERLAP.REPLICATE[22,23]/NUM.STATES.PAIR.TOTAL.REPLICATE[23,22]))
+
+
+##Count overlap based on starting genotype 
+J <- J
+I <- J
+GENOTYPE.BIN <- c(rep(1,4),rep(2,4),rep(3,3),rep(4,4),rep(5,4),rep(6,4))
+OVERLAP.COUNT.GENO <- matrix(0,nrow=length(I),ncol=length(J))
+colnames(OVERLAP.COUNT.GENO) <- J
+rownames(OVERLAP.COUNT.GENO) <- I
+for(i in I) {
+  for(j in J) {
+    if(i <= j) {
+      if(GENOTYPE.BIN[which(I==i)] != GENOTYPE.BIN[which(J==j)]) {
+        X <- AA.SITES[which(AA.SITES$EXP %in% I[which(GENOTYPE.BIN == GENOTYPE.BIN[which(I==i)])]),]
+        Y <- AA.SITES[which(AA.SITES$EXP %in% J[which(GENOTYPE.BIN == GENOTYPE.BIN[which(J==j)])]),]
+        Z <- merge(X,Y,by=c("SITE","AA"))
+        Z <- Z[Z$EXP.x != Z$EXP.y,]
+        
+        #Remove site 271?
+        #Z <- Z[Z$SITE != 271,]
+        
+        Z <- Z[!duplicated(Z[,c(1,2)]),]
+       
+        OVERLAP.COUNT.GENO[which(I==i),which(J==j)] <- nrow(Z)
+      } else {
+        Z <- AA.SITES[which(AA.SITES$EXP %in% I[which(GENOTYPE.BIN == GENOTYPE.BIN[which(I==i)])]),]
+        
+        #Remove site 271?
+        #Z <- Z[Z$SITE != 271,]
+        Z <- Z[!duplicated(Z[,c(2,4)]),]
+        
+        OVERLAP.COUNT.GENO[which(I==i),which(J==j)] <- nrow(Z)
+      }
+    }  
+  }
+}
+for(i in I) {
+  for(j in J) {
+    if(i > j) {
+      OVERLAP.COUNT.GENO[which(I==i),which(J==j)] <- OVERLAP.COUNT.GENO[which(I==i),which(I==i)] + OVERLAP.COUNT.GENO[which(J==j),which(J==j)] - OVERLAP.COUNT.GENO[which(J==j),which(I==i)]
+    }
+  }
+}
+OVERLAP.COUNT.GENO <- OVERLAP.COUNT.GENO[c(1,5,9,12,16,20),c(1,5,9,12,16,20)]
+
+NUM.STATES.SINGLE.TOTAL.GENO <- diag(OVERLAP.COUNT.GENO)
+NUM.STATES.PAIR.TOTAL.GENO   <- OVERLAP.COUNT.GENO
+NUM.STATES.PAIR.TOTAL.GENO[upper.tri(NUM.STATES.PAIR.TOTAL.GENO,diag=TRUE)] <- 0  
+NUM.STATES.PAIR.OVERLAP.GENO <- OVERLAP.COUNT.GENO
+NUM.STATES.PAIR.OVERLAP.GENO[lower.tri(NUM.STATES.PAIR.OVERLAP.GENO,diag=TRUE)] <- 0  
+
+#Between all pairs of starting genotypes
+mean(c(
+  t(NUM.STATES.PAIR.OVERLAP.GENO[1,2:6])/NUM.STATES.PAIR.TOTAL.GENO[2:6,1],
+  t(NUM.STATES.PAIR.OVERLAP.GENO[2,3:6])/NUM.STATES.PAIR.TOTAL.GENO[3:6,2],
+  t(NUM.STATES.PAIR.OVERLAP.GENO[3,4:6])/NUM.STATES.PAIR.TOTAL.GENO[4:6,3],
+  t(NUM.STATES.PAIR.OVERLAP.GENO[4,5:6])/NUM.STATES.PAIR.TOTAL.GENO[5:6,4],
+  t(NUM.STATES.PAIR.OVERLAP.GENO[5,6])/NUM.STATES.PAIR.TOTAL.GENO[6,5]))
+
+#Between all pairs of starting genotype with same starting phenotype
+mean(c(
+  t(NUM.STATES.PAIR.OVERLAP.GENO[1,2:3])/NUM.STATES.PAIR.TOTAL.GENO[2:3,1],
+  t(NUM.STATES.PAIR.OVERLAP.GENO[2,3])/NUM.STATES.PAIR.TOTAL.GENO[3,2],
+  t(NUM.STATES.PAIR.OVERLAP.GENO[4,5:6])/NUM.STATES.PAIR.TOTAL.GENO[5:6,4],
+  t(NUM.STATES.PAIR.OVERLAP.GENO[5,6])/NUM.STATES.PAIR.TOTAL.GENO[6,5]))
+
+#Between replicates of AncB1 and HsMCL1 (most distant MCL1 like)
+mean(t(NUM.STATES.PAIR.OVERLAP.GENO[4,5])/NUM.STATES.PAIR.TOTAL.GENO[5,4])
+
+#Between replicates of AncB4 and HsBCL2 (most distant BCL2 like)
+mean(t(NUM.STATES.PAIR.OVERLAP.GENO[1,2])/NUM.STATES.PAIR.TOTAL.GENO[2,1])
+
+
+##Count overlap based on starting phenotype 
+J <- J
+I <- J
+PHENOTYPE.BIN <- c(rep(1,11),rep(2,12))
+OVERLAP.COUNT.PHENO <- matrix(0,nrow=length(I),ncol=length(J))
+colnames(OVERLAP.COUNT.PHENO) <- J
+rownames(OVERLAP.COUNT.PHENO) <- I
+for(i in I) {
+  for(j in J) {
+    if(i <= j) {
+      if(PHENOTYPE.BIN[which(I==i)] != PHENOTYPE.BIN[which(J==j)]) {
+        X <- AA.SITES[which(AA.SITES$EXP %in% I[which(PHENOTYPE.BIN == PHENOTYPE.BIN[which(I==i)])]),]
+        Y <- AA.SITES[which(AA.SITES$EXP %in% J[which(PHENOTYPE.BIN == PHENOTYPE.BIN[which(J==j)])]),]
+        Z <- merge(X,Y,by=c("SITE","AA"))
+        Z <- Z[Z$EXP.x != Z$EXP.y,]
+        
+        #Remove site 271?
+        #Z <- Z[Z$SITE != 271,]
+        
+        Z <- Z[!duplicated(Z[,c(1,2)]),]
+        
+        OVERLAP.COUNT.PHENO[which(I==i),which(J==j)] <- nrow(Z)
+      } else {
+        Z <- AA.SITES[which(AA.SITES$EXP %in% I[which(PHENOTYPE.BIN == PHENOTYPE.BIN[which(I==i)])]),]
+        
+        #Remove site 271?
+        #Z <- Z[Z$SITE != 271,]
+        Z <- Z[!duplicated(Z[,c(2,4)]),]
+        
+        OVERLAP.COUNT.PHENO[which(I==i),which(J==j)] <- nrow(Z)
+      }
+    }
+  }  
+}
+for(i in I) {
+  for(j in J) {
+    if(i > j) {
+      OVERLAP.COUNT.PHENO[which(I==i),which(J==j)] <- OVERLAP.COUNT.PHENO[which(I==i),which(I==i)] + OVERLAP.COUNT.PHENO[which(J==j),which(J==j)] - OVERLAP.COUNT.PHENO[which(J==j),which(I==i)]
+    }
+  }
+}
+OVERLAP.COUNT.PHENO <- OVERLAP.COUNT.PHENO[c(1,12),c(1,12)]
+
+NUM.STATES.SINGLE.TOTAL.PHENO <- diag(OVERLAP.COUNT.PHENO)
+NUM.STATES.PAIR.TOTAL.PHENO   <- OVERLAP.COUNT.PHENO
+NUM.STATES.PAIR.TOTAL.PHENO[upper.tri(NUM.STATES.PAIR.TOTAL.PHENO,diag=TRUE)] <- 0  
+NUM.STATES.PAIR.OVERLAP.PHENO <- OVERLAP.COUNT.PHENO
+NUM.STATES.PAIR.OVERLAP.PHENO[lower.tri(NUM.STATES.PAIR.OVERLAP.PHENO,diag=TRUE)] <- 0  
+
+#Between pairs of starting phenotypes
+t(NUM.STATES.PAIR.OVERLAP.PHENO[1,2])/NUM.STATES.PAIR.TOTAL.PHENO[2,1]
 
 ###################################################
 ###AA Frequency comparison for entire experiment###
@@ -775,39 +980,116 @@ PHYLO.DIST <- as.matrix(read.table("Phylo.Dist.txt",header=TRUE))
 #Remove AncMB1 as it only has two replicates
 PHYLO.DIST <- PHYLO.DIST[-5,-5]
 
-#Phylogenetically independent
-par(mfrow=c(1,1))
-plot(  PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[1,],pch=19,cex=0.8,xlim=c(0,2.5),ylim=c(1,3),col="#FF0000",xlab="Phylogenetic Distance",ylab="R")
-points(PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[3,],pch=19,cex=0.8,col="#0000FF")
-points(PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[5,],pch=19,cex=0.8,col="#00FF00")
-abline(lm(D.DATA.PHYLO[1,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#FF0000")
-abline(lm(D.DATA.PHYLO[3,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#0000FF")
-abline(lm(D.DATA.PHYLO[5,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#00FF00")
-anova( lm(D.DATA.PHYLO[1,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]))
-anova( lm(D.DATA.PHYLO[3,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]))
-anova( lm(D.DATA.PHYLO[5,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]))
 
-#Phylogenetically non-independent
+#Plots
+#Phylogenetically non-independent, function ignored
 plot(  PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1],CHANCE.STATES.MATRIX[row(CHANCE.STATES.MATRIX) <= col(CHANCE.STATES.MATRIX) - 1],pch=19,cex=0.8,xlim=c(0,7),ylim=c(1,4),col=c("#FF0000"),xlab="Phylogenetic Distance",ylab="R")
 points(PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1],CONTIN.STATES.MATRIX[row(CONTIN.STATES.MATRIX) <= col(CONTIN.STATES.MATRIX) - 1],pch=19,cex=0.8,col="#0000FF")
 points(PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1],TOTALD.STATES.MATRIX[row(TOTALD.STATES.MATRIX) <= col(TOTALD.STATES.MATRIX) - 1],pch=19,cex=0.8,col="#00FF00")
 abline(lm(CHANCE.STATES.MATRIX[row(CHANCE.STATES.MATRIX) <= col(CHANCE.STATES.MATRIX) - 1] ~  PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1]),col="#FF0000")
 abline(lm(CONTIN.STATES.MATRIX[row(CONTIN.STATES.MATRIX) <= col(CONTIN.STATES.MATRIX) - 1] ~  PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1]),col="#0000FF")
 abline(lm(TOTALD.STATES.MATRIX[row(TOTALD.STATES.MATRIX) <= col(TOTALD.STATES.MATRIX) - 1] ~  PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1]),col="#00FF00")
-anova( lm(CHANCE.STATES.MATRIX[row(CHANCE.STATES.MATRIX) <= col(CHANCE.STATES.MATRIX) - 1]  ~ PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1]))
-anova( lm(CONTIN.STATES.MATRIX[row(CONTIN.STATES.MATRIX) <= col(CONTIN.STATES.MATRIX) - 1]  ~ PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1]))
-anova( lm(TOTALD.STATES.MATRIX[row(TOTALD.STATES.MATRIX) <= col(TOTALD.STATES.MATRIX) - 1]  ~ PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1]))
-legend(5,4,c("Chance","Contingency","Total"),fill=c("red","blue","green"),cex=0.4,pt.cex=0.4)
 
+#Phylogenetically non-independent, function aware
+points(PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)],CHANCE.STATES.MATRIX[row(CHANCE.STATES.MATRIX) <= col(CHANCE.STATES.MATRIX) - 1][c(1:3,10,14:15)],pch=23,cex=1,col="#FF0000")
+points(PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)],CONTIN.STATES.MATRIX[row(CONTIN.STATES.MATRIX) <= col(CONTIN.STATES.MATRIX) - 1][c(1:3,10,14:15)],pch=23,cex=1,col="#0000FF")
+points(PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)],TOTALD.STATES.MATRIX[row(TOTALD.STATES.MATRIX) <= col(TOTALD.STATES.MATRIX) - 1][c(1:3,10,14:15)],pch=23,cex=1,col="#00FF00")
+abline(lm(CHANCE.STATES.MATRIX[row(CHANCE.STATES.MATRIX) <= col(CHANCE.STATES.MATRIX) - 1][c(1:3,10,14:15)] ~  PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)]),col="#FF0000",lty=2)
+abline(lm(CONTIN.STATES.MATRIX[row(CONTIN.STATES.MATRIX) <= col(CONTIN.STATES.MATRIX) - 1][c(1:3,10,14:15)] ~  PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)]),col="#0000FF",lty=2)
+abline(lm(TOTALD.STATES.MATRIX[row(TOTALD.STATES.MATRIX) <= col(TOTALD.STATES.MATRIX) - 1][c(1:3,10,14:15)] ~  PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)]),col="#00FF00",lty=2)
+
+#Phylogenetically independent, function ignored
 points(PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[1,],pch=21,cex=1.4,col="#FF0000")
 points(PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[3,],pch=21,cex=1.4,col="#0000FF")
 points(PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[5,],pch=21,cex=1.4,col="#00FF00")
-abline(lm(D.DATA.PHYLO[1,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#FF0000",lty=2)
-abline(lm(D.DATA.PHYLO[3,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#0000FF",lty=2)
-abline(lm(D.DATA.PHYLO[5,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#00FF00",lty=2)
-anova( lm(D.DATA.PHYLO[1,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]))
-anova( lm(D.DATA.PHYLO[3,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]))
-anova( lm(D.DATA.PHYLO[5,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]))
+abline(lm(D.DATA.PHYLO[1,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#FF0000",lty=3)
+abline(lm(D.DATA.PHYLO[3,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#0000FF",lty=3)
+abline(lm(D.DATA.PHYLO[5,] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1]),col="#00FF00",lty=3)
+
+#Phylogenetically independent, function aware
+points(PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[1,],pch=21,cex=1.4,col="#FF0000")
+points(PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[3,],pch=21,cex=1.4,col="#0000FF")
+points(PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],D.DATA.PHYLO[5,],pch=21,cex=1.4,col="#00FF00")
+abline(lm(D.DATA.PHYLO[1,c(1:2,4:5)] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1][c(1:2,4:5)]),col="#FF0000",lty=4)
+abline(lm(D.DATA.PHYLO[3,c(1:2,4:5)] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1][c(1:2,4:5)]),col="#0000FF",lty=4)
+abline(lm(D.DATA.PHYLO[5,c(1:2,4:5)] ~ PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1][c(1:2,4:5)]),col="#00FF00",lty=4)
+
+legend(5,4,c("Chance","Contingency","Total"),fill=c("red","blue","green"),cex=0.4,pt.cex=0.4)
+legend(0,4,c("Non-Independent","Independent"),pch=c(19,21),pt.cex=c(0.8,1.2),cex=0.4)
+legend(0,3.5,c("Diff Function","Same Function"),pch=c(19,23),pt.cex=.8,cex=0.4)
+
+#Calculate slopes and p-values
+#Phylogenetically non-independent, function ignored
+X1 <- cbind(CHANCE.STATES.MATRIX[row(CHANCE.STATES.MATRIX) <= col(CHANCE.STATES.MATRIX) - 1],PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1],rep(1,15))
+X2 <- cbind(CONTIN.STATES.MATRIX[row(CONTIN.STATES.MATRIX) <= col(CONTIN.STATES.MATRIX) - 1],PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1],rep(2,15))
+X3 <- cbind(TOTALD.STATES.MATRIX[row(TOTALD.STATES.MATRIX) <= col(TOTALD.STATES.MATRIX) - 1],PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1],rep(3,15))
+PHYLO.DEP <- rbind(X1,X2,X3)
+colnames(PHYLO.DEP) <- c("Effect","Distance","Type")
+PHYLO.DEP <- data.frame(PHYLO.DEP)
+PHYLO.DEP$Type <- as.factor(PHYLO.DEP$Type)
+PHYLO.DIST.LM <- lm(PHYLO.DEP$Effect ~ PHYLO.DEP$Distance*PHYLO.DEP$Type)
+summary(PHYLO.DIST.LM)
+CONTRAST <- matrix(c(0, 0, 0, 0, -1, 1), 1)
+CONTRAST.OUT <- glht(PHYLO.DIST.LM, linfct = CONTRAST)
+summary(CONTRAST.OUT )
+
+#Phylogenetically non-independent, function aware
+X1 <- cbind(CHANCE.STATES.MATRIX[row(CHANCE.STATES.MATRIX) <= col(CHANCE.STATES.MATRIX) - 1][c(1:3,10,14:15)],PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)],rep(1,6))
+X2 <- cbind(CONTIN.STATES.MATRIX[row(CONTIN.STATES.MATRIX) <= col(CONTIN.STATES.MATRIX) - 1][c(1:3,10,14:15)],PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)],rep(2,6))
+X3 <- cbind(TOTALD.STATES.MATRIX[row(TOTALD.STATES.MATRIX) <= col(TOTALD.STATES.MATRIX) - 1][c(1:3,10,14:15)],PHYLO.DIST[row(PHYLO.DIST) <= col(PHYLO.DIST) - 1][c(1:3,10,14:15)],rep(3,6))
+PHYLO.DEP.SAME <- rbind(X1,X2,X3)
+colnames(PHYLO.DEP.SAME) <- c("Effect","Distance","Type")
+PHYLO.DEP.SAME <- data.frame(PHYLO.DEP.SAME)
+PHYLO.DEP.SAME$Type <- as.factor(PHYLO.DEP.SAME$Type)
+PHYLO.DIST.SAME.LM <- lm(PHYLO.DEP.SAME$Effect ~ PHYLO.DEP.SAME$Distance*PHYLO.DEP.SAME$Type)
+summary(PHYLO.DIST.SAME.LM)
+CONTRAST <- matrix(c(0, 0, 0, 0, -1, 1), 1)
+CONTRAST.OUT <- glht(PHYLO.DIST.SAME.LM, linfct = CONTRAST)
+summary(CONTRAST.OUT )
+
+#Phylogenetically independent, function ignored
+X1 <- cbind(D.DATA.PHYLO[1,],PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],rep(1,5))
+X2 <- cbind(D.DATA.PHYLO[3,],PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],rep(2,5))
+X3 <- cbind(D.DATA.PHYLO[5,],PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1],rep(3,5))
+PHYLO.IND <- rbind(X1,X2,X3)
+colnames(PHYLO.IND) <- c("Effect","Distance","Type")
+PHYLO.IND <- data.frame(PHYLO.IND)
+PHYLO.IND$Type <- as.factor(PHYLO.IND$Type)
+PHYLO.IND.LM <- lm(PHYLO.IND$Effect ~ PHYLO.IND$Distance*PHYLO.IND$Type)
+summary(PHYLO.IND.LM)
+CONTRAST <- matrix(c(0, 0, 0, 0, -1, 1), 1)
+CONTRAST.OUT <- glht(PHYLO.IND.LM, linfct = CONTRAST)
+summary(CONTRAST.OUT )
+
+#Phylogenetically independent, function aware
+X1 <- cbind(D.DATA.PHYLO[1,c(1:2,4:5)],PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1][c(1:2,4:5)],rep(1,4))
+X2 <- cbind(D.DATA.PHYLO[3,c(1:2,4:5)],PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1][c(1:2,4:5)],rep(2,4))
+X3 <- cbind(D.DATA.PHYLO[5,c(1:2,4:5)],PHYLO.DIST[row(PHYLO.DIST) == col(PHYLO.DIST) - 1][c(1:2,4:5)],rep(3,4))
+PHYLO.IND.SAME <- rbind(X1,X2,X3)
+colnames(PHYLO.IND.SAME) <- c("Effect","Distance","Type")
+PHYLO.IND.SAME <- data.frame(PHYLO.IND.SAME)
+PHYLO.IND.SAME$Type <- as.factor(PHYLO.IND.SAME$Type)
+PHYLO.IND.SAME.LM <- lm(PHYLO.IND.SAME$Effect ~ PHYLO.IND.SAME$Distance*PHYLO.IND.SAME$Type)
+summary(PHYLO.IND.SAME.LM)
+CONTRAST <- matrix(c(0, 0, 0, 0, -1, 1), 1)
+CONTRAST.OUT <- glht(PHYLO.IND.SAME.LM, linfct = CONTRAST)
+summary(CONTRAST.OUT )
+
+##Compare MCL-1 like and BCL-2 like selection regimes
+BCL2.CHANCE <- CHANCE.STATES.MATRIX[c(1:3),c(1:3)][upper.tri(CHANCE.STATES.MATRIX[c(1:3),c(1:3)])]
+BCL2.CONTIN <- CONTIN.STATES.MATRIX[c(1:3),c(1:3)][upper.tri(CONTIN.STATES.MATRIX[c(1:3),c(1:3)])]
+
+MCL1.CHANCE <- CHANCE.STATES.MATRIX[c(4:6),c(4:6)][upper.tri(CHANCE.STATES.MATRIX[c(4:6),c(4:6)])]
+MCL1.CONTIN <- CONTIN.STATES.MATRIX[c(4:6),c(4:6)][upper.tri(CONTIN.STATES.MATRIX[c(4:6),c(4:6)])]
+
+t.test(BCL2.CHANCE,MCL1.CHANCE)
+t.test(BCL2.CONTIN,MCL1.CONTIN)
+
+barplot(c(mean(BCL2.CHANCE),mean(MCL1.CHANCE),mean(BCL2.CONTIN),mean(MCL1.CONTIN)),ylim=c(0,2.5),width=1,space = 1)
+error.bar(x=seq(1.5,7.5,2),y=c(mean(BCL2.CHANCE),mean(MCL1.CHANCE),mean(BCL2.CONTIN),mean(MCL1.CONTIN)),
+          upper=c(mean(BCL2.CHANCE),mean(MCL1.CHANCE),mean(BCL2.CONTIN),mean(MCL1.CONTIN)) + 1.96*c(sd(BCL2.CHANCE),sd(MCL1.CHANCE),sd(BCL2.CONTIN),sd(MCL1.CONTIN))/sqrt(3),
+          lower=c(mean(BCL2.CHANCE),mean(MCL1.CHANCE),mean(BCL2.CONTIN),mean(MCL1.CONTIN)) - 1.96*c(sd(BCL2.CHANCE),sd(MCL1.CHANCE),sd(BCL2.CONTIN),sd(MCL1.CONTIN))/sqrt(3))
+
 
 ##Site Frequency comparison
 #Identify sites with a high frequency non-wt allele
